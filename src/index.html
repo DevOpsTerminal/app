@@ -8,9 +8,14 @@
     <link rel="stylesheet" href="/resources/demos/style.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script
+            src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+            integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+            crossorigin="anonymous"></script>
+
     <script>
         $(function () {
-            $("#accordion").accordion();
+            // $("#accordion").accordion();
         });
     </script>
 </head>
@@ -33,12 +38,12 @@
     };
 
     $(document).ready(function () {
-        $("#Template-categories").tmpl(myData).appendTo("#listview-categories");
+        // $("#Template-categories").tmpl(myData).appendTo("#listview-categories");
     });
 </script>
 
 
-<script id="Template-categories" type="text/x-jquery-tmpl">
+<script id="Template-categories" type="template">
 <ul>
 {{each categories}}
 <li data-theme="a" class="ui-btn ui-btn-icon-right ui-li ui-li-has-alt ui-btn-up-a">
@@ -58,18 +63,94 @@
 {{/each}}
 </ul>
 
+
 </script>
 
+
+<div class="container1"></div>
+
+<script>
+    $(function() {
+        /*
+        $.ajax({
+            url: '../demodata/post.json',
+            success: function(content) {
+                // var array = JSON.parse(content);
+                console.log(content);
+                // console.log(array);
+                content.forEach(function(index, obj) {
+                    $('.container1').append(
+                        `<div class="col-md-3">
+                                <div class="thumbnail">
+                                    <img src="${obj.img}" class="img-rounded img-responsive" width="100%"></img>
+                                    <div class="caption">
+                                        <p>${obj.title}</p>
+                                    </div>
+                                </div>
+                            </div>`
+                    );
+                });
+            }
+        })
+*/
+        $.ajax({
+            url: '../demodata/list.json',
+            success: function(content) {
+                // var array = JSON.parse(content);
+                console.log(content);
+                // console.log(array);
+                content.forEach(function(obj, index) {
+                    // console.log(index);
+                    // console.log(obj[index]);
+
+                    $('#accordion').append(
+                        `   <h3>${obj.cmd}</h3>
+                            <div>
+                                <p>
+                                    ${obj.output}
+                                </p>
+                            </div>`
+                    );
+                });
+                $("#accordion").accordion();
+            }
+        })
+
+    });
+</script>
+
+
+<div class="container">
+    <script id="blog" type="template">
+        <div class="col-md-3">
+            <div class="thumbnail">
+                <img src="{{image}}" class="img-rounded img-responsive" width="100%"></img>
+                <div class="caption">
+                    <p>{{title}}</p>
+                </div>
+            </div>
+        </div>
+    </script>
+</div>
+
+<script>
+    // $(function() {
+    //     $.ajax({
+    //         url: '../demodata/post.json',
+    //         success: function(content) {
+    //             var temp = $.trim($('#blog').html());
+    //             $.each(JSON.parse(content), function(index, obj) {
+    //                 var x = temp.replace(/{{title}}/ig, obj.title).replace(/{{image}}/ig, obj.img);
+    //                 $('.container').append(x);
+    //             });
+    //         }
+    //     })
+    // });
+</script>
+
+
 <div id="accordion">
-    <h3>Section 1</h3>
-    <div>
-        <p>
-            Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
-            ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
-            amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
-            odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
-        </p>
-    </div>
+
     <h3>Section 2</h3>
     <div>
         <p>
