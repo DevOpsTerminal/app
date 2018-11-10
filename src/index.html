@@ -16,6 +16,50 @@
 </head>
 <body>
 
+
+<script>
+    var myData = {
+        categories: [
+            {
+                active: true, name: "Cat1", items: [
+                    {active: true, id: 1},
+                    {active: true, id: 2}]
+            },
+            {
+                active: true, name: "Cat2", items: [
+                    {active: true, id: 3},
+                    {active: true, id: 4}]
+            }]
+    };
+
+    $(document).ready(function () {
+        $("#Template-categories").tmpl(myData).appendTo("#listview-categories");
+    });
+</script>
+
+
+<script id="Template-categories" type="text/x-jquery-tmpl">
+<ul>
+{{each categories}}
+<li data-theme="a" class="ui-btn ui-btn-icon-right ui-li ui-li-has-alt ui-btn-up-a">
+    <div class="ui-btn-inner ui-li ui-li-has-alt">
+        <div class="ui-btn-text">
+            <a href="#${name}" class="ui-link-inherit">
+                <h3 class="ui-li-heading">${name}</h3>
+            </a>
+        </div>
+        <div> <ul>
+        {{each items}}
+            <li> item : ${name}</li>
+        {{/each}}
+        </ul> </div>
+    </div>
+</li>
+{{/each}}
+</ul>
+
+</script>
+
 <div id="accordion">
     <h3>Section 1</h3>
     <div>
