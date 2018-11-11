@@ -62,6 +62,13 @@ Jeśli pojawia się błąd w sytsemie, każdy użytkownik może go od razu zobac
 - developer - uruchamia na serwerza aplikacje
 - obserwator, ds jakosci, klient, etc, - w celu pokazania jak dziala sysstem i gdzie wystapil blad
 
+### Blokowanie i ukrywanie dostepu uzytkownikom o nizszej roli
+wyzsza instancja moze blokowac i wprowadzac warunkowe wykonanie/obserwowanie
+np developer moze ukryc przed obserwatorem pewne dzialania: np zwiazane z bezpieczenstwem danych
+Administrator moze zablokowc dostep do pewnych sfer systemu i projektow dla developera
+np developer moze wyslac do administratora zadanie wykonania update systemu poniewaz  nie moze uzywac nowszej wersji jezyka programowania
+albo system potrzebuje nowego pakietu, ktorego obecnie nie ma
+
 
 ### Projekt: serwis
 służy do instalacji pakietów,
