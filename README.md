@@ -54,6 +54,14 @@ Dodatkowo podział na projekty, pozwala na przydzielenie zespołów projektowych
 do konkretnego zakresu działań..
 Jeśli pojawia się błąd w sytsemie, każdy użytkownik może go od razu zobaczyć.
 
+## Zespoł
+
+## Role
+- wlasciciel serwera - osoba ktora go kupila, ale moze nie wiedziec jak nim zarzadzac, moze byc konieczne aby majac go np w firmie, podszedl i zrestartowal maszyne osobiscie
+- administrator - osoba ktora ma wiedze jak nim zarzadzac
+- developer - uruchamia na serwerza aplikacje
+- obserwator, ds jakosci, klient, etc, - w celu pokazania jak dziala sysstem i gdzie wystapil blad
+
 
 ### Projekt: serwis
 służy do instalacji pakietów,
@@ -68,5 +76,25 @@ odpowiedz serwera
 
 Odpowiedź serwera może być różna, poprawne wykonanie, albo np błąd,
 dlatego wszystkie odpowiedzi z informacją błędu będą wyświetlane na czerwono/zółto
+
+
+# Dla kogo jest to rozwiązanie
+Roziwązanie to nadaje się do dużych grup deweloperów, gdzie każdy ma dostęp do maszyny serwera, ale
+powinien mieć ograniczony wpływ i przejrzysty panel do zarządzania usługami,
+często ze względów bezpiezczeństwa nie daje się dostępu użytkownikowi do serwera,
+Tutaj możliwe jest wysyłanie do administratora zapytań, czy może wykonać konkretne zapytanie,
+lub po prostu wykonać konkretną pracę, wówczas zamiast komendy pisze sie opis, co ma wykonać na konkretnym serwerze
+W ten sposób, workflow jest podobny, ale nie daje szansy na przypadkowe zmiany na serwerze, bo osobą
+odpowiedzialną jest administrator, a przepływ danych jest jasny i zarchiwizowany.
+
+## Raporty
+W przyszłości możliwe będzie tworzenie raportów
+
+## Szkolenia
+Ten system może przydać się grupom w edukacji, na lekcjach programowania i ogólnie administrowanie
+być może powstanie specjalna wersja dla nauczycieli, dzięki czemu
+na każdy uczeń będzie mógł w grupie dzielić się wykonanymi zadaniami i pytać o przyczyny dlaczego coś nie działą
+Cały proces może przebiegać zdalnie, gdyć devopstools jest niezależny od systemu.
+
 
 
