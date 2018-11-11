@@ -1,4 +1,12 @@
 # DevOpsTerminal | DOT
+Terminal with Web Interface for any team - Let's work in terminal together
+
+# Git profile & repositories
+https://github.com/DevOpsTerminal
+
++ [logo](https://devopsterminal.github.io/logo/)
++ [frontend](https://devopsterminal.github.io/frontend/)
++ [backend](https://devopsterminal.github.io/backend/)
 
 # frontend
 The frontend side of application, with jquery plugin and html, json technologies
