@@ -1,3 +1,5 @@
+# DevOpsTerminal | DOT
+
 # frontend
 The frontend side of application, with jquery plugin and html, json technologies
 
@@ -86,9 +88,9 @@ dlatego wszystkie odpowiedzi z informacją błędu będą wyświetlane na czerwo
 
 
 # Dla kogo jest to rozwiązanie
-Roziwązanie to nadaje się do dużych grup deweloperów, gdzie każdy ma dostęp do maszyny serwera, ale
-powinien mieć ograniczony wpływ i przejrzysty panel do zarządzania usługami,
-często ze względów bezpiezczeństwa nie daje się dostępu użytkownikowi do serwera,
+Rozwiązanie to nadaje się dla dużych grup deweloperów, gdzie każdy ma dostęp do maszyny serwera, ale
+powinien mieć ograniczony dostęp.
+Często ze względów bezpiezczeństwa nie daje się dostępu użytkownikowi do serwera,
 Tutaj możliwe jest wysyłanie do administratora zapytań, czy może wykonać konkretne zapytanie,
 lub po prostu wykonać konkretną pracę, wówczas zamiast komendy pisze sie opis, co ma wykonać na konkretnym serwerze
 W ten sposób, workflow jest podobny, ale nie daje szansy na przypadkowe zmiany na serwerze, bo osobą
@@ -98,6 +100,10 @@ odpowiedzialną jest administrator, a przepływ danych jest jasny i zarchiwizowa
 W przyszłości możliwe będzie tworzenie raportów
 
 ## Szkolenia
+Przejrzysty panelowi do zarządzania usługami w grupach użytkowników można być używany w grup edukacjynych.
+Gdzie dodatkowa rola, np nauczyciel, będzie pozwalala na obserwacje działań uczniów i informowanie jakie działania powinni wykonać.
+Jak poprawić, itp, ale bez uprawnień do ingerencji, gdyż do tego powinny być uprawnienia typu administrator.
+
 Ten system może przydać się grupom w edukacji, na lekcjach programowania i ogólnie administrowanie
 być może powstanie specjalna wersja dla nauczycieli, dzięki czemu
 na każdy uczeń będzie mógł w grupie dzielić się wykonanymi zadaniami i pytać o przyczyny dlaczego coś nie działą
