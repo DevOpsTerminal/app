@@ -28,6 +28,12 @@ zamiast tmpl starego uzywanie render:
 http://71104.github.io/jquery-handlebars/
 
 
+## Sample data for ajax
+static json answer for demo ajax reqest
+
+        /ajax
+
+
 ## Cel projektu
 
 Celem jest stworzenie nakladki na terminal, ktory bedzie wykonywal skrypty i wczesniej zdefiniowane komendy
