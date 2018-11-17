@@ -46,6 +46,7 @@
         // $("#Template-categories").tmpl(myData).appendTo("#listview-categories");
     });
 </script>
+<!--
 
 
 <script id="Template-categories" type="template">
@@ -67,10 +68,9 @@
 </li>
 {{/each}}
 </ul>
-
-
 </script>
 
+-->
 
 <div class="container1"></div>
 
@@ -84,8 +84,9 @@
 
     var routing = {
       cmd:  {
-          first : '../demodata/1/cmd.json',
-          list : '../demodata/list.json'
+          first : '../ajax/cmd/1.json',
+          post : '../ajax/cmd/post.json',
+          list : '../ajax/cmd/list.json'
       }
     };
     $(function() {
@@ -111,7 +112,10 @@
             }
         })
 */
+
         $.ajax({
+            // url: routing.cmd.post,
+            // url: routing.cmd.first,
             url: routing.cmd.list,
             success: function(content) {
                 // var array = JSON.parse(content);
@@ -137,7 +141,7 @@
     });
 </script>
 
-
+<!--
 <div class="container">
     <script id="blog" type="template">
         <div class="col-md-3">
@@ -150,6 +154,7 @@
         </div>
     </script>
 </div>
+-->
 
 <script>
     // $(function() {
@@ -169,15 +174,7 @@
 
 <div id="accordion">
 
-    <h3>Section 2</h3>
-    <div>
-        <p>
-            Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
-            purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
-            velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
-            suscipit faucibus urna.
-        </p>
-    </div>
+
     <h3>Section 3</h3>
     <div>
         <p>
