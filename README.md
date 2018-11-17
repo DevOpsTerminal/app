@@ -7,6 +7,7 @@ https://github.com/DevOpsTerminal
 + [logo](https://devopsterminal.github.io/logo/)
 + [frontend](https://devopsterminal.github.io/frontend/)
 + [backend](https://devopsterminal.github.io/backend/)
++ [swagger](https://devopsterminal.github.io/swagger/)
 
 # frontend
 The frontend side of application, with jquery plugin and html, json technologies
