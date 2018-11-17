@@ -5,22 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>jQuery UI Accordion - Default functionality</title>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
+    <!--<link rel="stylesheet" href="/resources/demos/style.css">-->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script
-            src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
-            integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
-            crossorigin="anonymous"></script>
+    <!--<script-->
+            <!--src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"-->
+            <!--integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="-->
+            <!--crossorigin="anonymous"></script>-->
 
     <script>
         $(function () {
             // $("#accordion").accordion();
         });
     </script>
+
 </head>
 <body>
 
+<iframe id="iframe" src="template/cmd_list.html" width="480" height="320" scrolling="no" frameborder="0"></iframe>
+<!--<script src="template/cmd_list.html" id="cmd_list" type="template"></script>-->
 
 <script>
     var myData = {
@@ -38,6 +41,8 @@
     };
 
     $(document).ready(function () {
+        var iframe = document.getElementById('iframe').contentWindow.document.body.innerHTML;
+        console.log(iframe);
         // $("#Template-categories").tmpl(myData).appendTo("#listview-categories");
     });
 </script>
@@ -70,6 +75,19 @@
 <div class="container1"></div>
 
 <script>
+    var template = {
+        cmd:  {
+            first : '../demodata/1/cmd.json',
+            list : '../demodata/list.json'
+        }
+    };
+
+    var routing = {
+      cmd:  {
+          first : '../demodata/1/cmd.json',
+          list : '../demodata/list.json'
+      }
+    };
     $(function() {
         /*
         $.ajax({
@@ -94,7 +112,7 @@
         })
 */
         $.ajax({
-            url: '../demodata/list.json',
+            url: routing.cmd.list,
             success: function(content) {
                 // var array = JSON.parse(content);
                 console.log(content);
