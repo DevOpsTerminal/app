@@ -252,7 +252,9 @@
 <div class="top_menu">
     <div class="logo"></div>
     <div class="project_name">
-        DevOpsTerminal
+        <a href="https://app.devopsterminal.com/" target="_blank">
+            DevOpsTerminal
+        </a>
     </div>
     <div class="link share">
         <a href="#about">
@@ -300,8 +302,24 @@
 
             <div class="create_new_project">
                 <form action="#create_new_project">
-                    <label for="project_name">New Project</label>
-                    <input type="text" name="project_name" id="project_name">
+
+                    <div class="input group">
+                        <div class="input name">
+                            <label for="project_name">New Project</label>
+                        </div>
+                        <div class="input value">
+                            <input type="text" name="project_name" id="project_name">
+                        </div>
+                    </div>
+
+                    <div class="input group">
+                        <div class="input name">
+                            <label for="path">Path</label>
+                        </div>
+                        <div class="input value">
+                            <input type="text" name="path" id="path">
+                        </div>
+                    </div>
                     <input type="submit" id="create_new_project_button"
                            class="create_new_project_button ui-button ui-corner-all ui-widget" value="create">
                 </form>
@@ -418,7 +436,6 @@
                     <div class="input value">
                         <input type="text" name="user" id="user">
                     </div>
-
                 </div>
 
                 <div class="input group">

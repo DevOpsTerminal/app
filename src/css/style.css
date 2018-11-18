@@ -58,6 +58,14 @@ body {
     color: #9dd96d;
 }
 
+.top_menu .project_name a{
+    color: #9dd96d;
+    text-decoration: none;
+}
+.top_menu .project_name a :visited{
+    color: #9dd96d;
+}
+
 /*
     BUTTONS
  */
