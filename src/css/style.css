@@ -68,6 +68,9 @@ body {
     color: #ffffff;
 }
 
+.many_lines_space button{
+    margin-bottom: 9px;
+}
 
 /*
     TABS
@@ -99,6 +102,15 @@ body {
     float: right;
     text-align: right;
     width: 70%;
+}
+@media only screen and (max-width: 600px) {
+    .row_cmd div.command {
+        width: 55%;
+    }
+
+    .row_cmd div.time {
+        width: 39%;
+    }
 }
 
 /*
