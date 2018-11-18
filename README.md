@@ -53,6 +53,16 @@ tak aby nie zawieral wrazliwych danych jak:
 - Email
 - hash
 
+### Struktura
+Są trzy elementy:
++ serwer na ktorym są wykonywane komendy i skrypty
++ projetky, tzn zestawy komend i skryptów skojarzynch, zgrupowanych wokół jednego tematu, np działania na bazie danych
++ historyczne listy wykonywanych skryptów lub komend
+
+Gdy konieczne jest wykonywanie wielu powtarzalnych komend na lokalnym czy na zdalnym serwerze
+Wówczas warto miec narzędzie pozwalające na szybkie wykonywanie pewnych standardowych zadań.
+DevOpsTerminal działa również na urządzeniach mobilnych.
+
 ### Zgłoszenie E-mail
 Można też zgłaszać te błędy do innego członka zespołu,
 np administratora
