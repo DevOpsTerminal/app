@@ -3,7 +3,7 @@ Terminal with Web Interface for any team - Let's work in terminal together
 
 [www demo](http://app.devopsterminal.com)
 
-![screen](/docs/img/chrome_2018-11-18_green.png)
+![screen](/docs/img/chrome_2018-11-18_2.png)
 
 [History](HISTORY.md)
 
