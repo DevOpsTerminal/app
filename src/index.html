@@ -43,6 +43,7 @@
 
 
 <script>
+
     function loadCmd() {
         $.ajax({
             // url: routing.cmd.post,
@@ -57,7 +58,7 @@
                     // console.log(obj[index]);
                     //$('#accordion').append(template.cmd.item);
 
-                    $('#accordion').prepend(
+                    $('#history_accordion').prepend(
                         `<h3 class="row_cmd"><div class="time">${obj.time}</div><div class="command">${obj.cmd}</div></h3>
                         <div>
                             <p>
@@ -67,7 +68,20 @@
                     );
 
                 });
-                $("#accordion").accordion();
+                $("#history_accordion").accordion({
+                    animate: {
+                        duration: 200
+                    }
+                });
+
+                $("#project_accordion").accordion({
+                    animate: {
+                        duration: 200
+                    }
+                });
+
+                OpenHistoryCmd();
+
             }
         })
     }
@@ -270,85 +284,148 @@
         <h3 class="first">Last Sessions</h3>
 
         <div class="widget">
-            <button class="active" aria-selected="true">today (3)</button>
-            <button>yesterday (5)</button>
-            <button>last 3 days (6)</button>
-            <button>last Week (20)</button>
-            <button>last Month (50)</button>
-            <button>2018</button>
-            <button>2017</button>
-
-
-        </div>
-
-
-        <h3>Commands & Scripts</h3>
-
-        <div id="accordion">
-
-            <h3 class="row_cmd">
-                <div class="time">today 15:24</div>
-                <div class="command">chmod -R 4777 /root</div>
-            </h3>
-
-            <p>
-                Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
-                Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
-                ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
-                lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
-            </p>
-
-
-            <h3>
-                <label for="command">New command</label>
-                <input type="text" name="command" id="command">
-                <input type="submit" value="execute">
-            </h3>
-            <div>
-                <h4>What eman this command, how to use</h4>
-                <p>
-                <pre>chmod [options] mode file1 …</pre>
-                <a href="https://de.wikipedia.org/wiki/Chmod">wiki chmod</a>
-                </p>
-                <h4>Try to use another used before command</h4>
-                <p>
-                    Cras dictum. Pellentesque habitant morbi tristique senectus et netus
-                    et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
-                    faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
-                    mauris vel est.
-                </p>
-                <h4>Try to use script from this project</h4>
-                <p>
-                    Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
-                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-                    inceptos himenaeos.
-                </p>
-                <ul>
-                    <li>List item one</li>
-                    <li>List item two</li>
-                    <li>List item three</li>
-                </ul>
+            <div class="history_list">
+                <button class="active" aria-selected="true">today (3)</button>
+                <button>yesterday (5)</button>
+                <button>last 3 days (6)</button>
+                <button>last Week (20)</button>
+                <button>last Month (50)</button>
+                <button>2018</button>
+                <button>2017</button>
             </div>
 
         </div>
 
+        <div class="history_cmd">
 
+            <h3>Commands & Scripts</h3>
+
+            <div id="history_accordion">
+
+                <h3 class="row_cmd">
+                    <div class="time">today 15:24</div>
+                    <div class="command">chmod -R 4777 /root</div>
+                </h3>
+
+                <p>
+                    Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+                    Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+                    ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+                    lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+                </p>
+
+
+                <h3>
+                    <label for="command">New command</label>
+                    <input type="text" name="command" id="command">
+                    <input type="submit" value="execute">
+                </h3>
+                <div>
+                    <h4>What eman this command, how to use</h4>
+                    <p>
+                    <pre>chmod [options] mode file1 …</pre>
+                    <a href="https://de.wikipedia.org/wiki/Chmod">wiki chmod</a>
+                    </p>
+                    <h4>Try to use another used before command</h4>
+                    <p>
+                        Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+                        et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+                        faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+                        mauris vel est.
+                    </p>
+                    <h4>Try to use script from this project</h4>
+                    <p>
+                        Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                        inceptos himenaeos.
+                    </p>
+                    <ul>
+                        <li>List item one</li>
+                        <li>List item two</li>
+                        <li>List item three</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <hr>
         <h3>Projects</h3>
 
-        <div class="widget">
+        <div class="create_new_project_area">
 
-
-            <button>docker</button>
-            <button>composer</button>
-            <button>artisan</button>
-            <button>MySQL</button>
+            <div class="project_list">
+                <button class="ui-button ui-corner-all ui-widget">docker</button>
+                <button class="ui-button ui-corner-all ui-widget">composer</button>
+                <button class="ui-button ui-corner-all ui-widget">artisan</button>
+                <button class="ui-button ui-corner-all ui-widget">MySQL</button>
+                <button class="ui-button ui-corner-all ui-widget" id="create_new_project_form">+</button>
+            </div>
 
             <div class="create_new_project">
-                <label for="project">New Project</label>
-                <input type="text" name="project" id="project">
-                <input type="submit" value="create">
+                <form action="#create_new_project">
+                    <label for="project_name">New Project</label>
+                    <input type="text" name="project_name" id="project_name">
+                    <input type="submit" id="create_new_project_button"
+                           class="create_new_project_button ui-button ui-corner-all ui-widget" value="create">
+                </form>
             </div>
         </div>
+
+        <div class="project_cmd">
+
+            <h3>Commands & Scripts</h3>
+
+            <div id="project_accordion">
+
+                <h3 class="row_cmd">
+                    <div class="time">today 15:24</div>
+                    <div class="command">chmod -R 4777 /root</div>
+                </h3>
+
+                <p>
+                    Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+                    Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+                    ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+                    lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+                </p>
+
+
+                <h3>
+                    <label for="command">New command</label>
+                    <input type="text" name="command" id="command">
+                    <input type="submit" value="execute">
+                </h3>
+                <div>
+                    <h4>What eman this command, how to use</h4>
+                    <p>
+                    <pre>chmod [options] mode file1 …</pre>
+                    <a href="https://de.wikipedia.org/wiki/Chmod">wiki chmod</a>
+                    </p>
+                    <h4>Try to use another used before command</h4>
+                    <p>
+                        Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+                        et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+                        faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+                        mauris vel est.
+                    </p>
+                    <h4>Try to use script from this project</h4>
+                    <p>
+                        Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                        inceptos himenaeos.
+                    </p>
+                    <ul>
+                        <li>List item one</li>
+                        <li>List item two</li>
+                        <li>List item three</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
 
     </div>
 
@@ -437,6 +514,7 @@
 
 <link rel="stylesheet" href="css/style.css">
 <script src="js/form_submit.js"></script>
+<script src="js/project.js"></script>
 
 
 </body>
