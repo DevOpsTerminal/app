@@ -9,9 +9,9 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!--<script-->
-            <!--src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"-->
-            <!--integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="-->
-            <!--crossorigin="anonymous"></script>-->
+    <!--src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"-->
+    <!--integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="-->
+    <!--crossorigin="anonymous"></script>-->
 
     <script>
         $(function () {
@@ -19,10 +19,16 @@
         });
     </script>
 
+    <script>
+        $(function () {
+            // $( "#tabs" ).tabs();
+        });
+    </script>
+
 </head>
 <body>
 
-<iframe id="iframe" src="template/cmd_list.html" width="480" height="320" scrolling="no" frameborder="0"></iframe>
+<!--<iframe id="iframe" src="template/cmd_list.html" width="480" height="320" scrolling="no" frameborder="0"></iframe>-->
 <!--<script src="template/cmd_list.html" id="cmd_list" type="template"></script>-->
 
 <script>
@@ -41,11 +47,45 @@
     };
 
     $(document).ready(function () {
-        var iframe = document.getElementById('iframe').contentWindow.document.body.innerHTML;
-        console.log(iframe);
+        // var iframe = document.getElementById('iframe').contentWindow.document.body.innerHTML;
+        // console.log(iframe);
         // $("#Template-categories").tmpl(myData).appendTo("#listview-categories");
     });
 </script>
+
+
+<script>
+    function loadCmd() {
+        $.ajax({
+            // url: routing.cmd.post,
+            // url: routing.cmd.first,
+            url: routing.cmd.list,
+            success: function (content) {
+                // var array = JSON.parse(content);
+                console.log(content);
+                // console.log(array);
+                content.forEach(function (obj, index) {
+                    // console.log(index);
+                    // console.log(obj[index]);
+                    //$('#accordion').append(template.cmd.item);
+
+                    $('#accordion').prepend(
+                        `<h3 class="row_cmd"><div class="time">${obj.time}</div><div class="command">${obj.cmd}</div></h3>
+                        <div>
+                            <p>
+                                ${obj.output}
+                            </p>
+                        </div>`
+                    );
+
+                });
+                $("#accordion").accordion();
+            }
+        })
+    }
+</script>
+
+
 <!--
 
 
@@ -76,69 +116,90 @@
 
 <script>
     var template = {
-        cmd:  {
-            first : '../demodata/1/cmd.json',
-            list : '../demodata/list.json'
+        cmd: {
+            first: '../demodata/1/cmd.json',
+            list: '../demodata/list.json',
+            // item: `   <h3>${obj.cmd}</h3>`
+
         }
     };
 
     var routing = {
-      cmd:  {
-          first : '../ajax/cmd/1.json',
-          post : '../ajax/cmd/post.json',
-          list : '../ajax/cmd/list.json'
-      }
+        cmd: {
+            first: '../ajax/cmd/1.json',
+            post: '../ajax/cmd/post.json',
+            list: '../ajax/cmd/list.json'
+        }
     };
-    $(function() {
-        /*
-        $.ajax({
-            url: '../demodata/post.json',
-            success: function(content) {
-                // var array = JSON.parse(content);
-                console.log(content);
-                // console.log(array);
-                content.forEach(function(index, obj) {
-                    $('.container1').append(
-                        `<div class="col-md-3">
-                                <div class="thumbnail">
-                                    <img src="${obj.img}" class="img-rounded img-responsive" width="100%"></img>
-                                    <div class="caption">
-                                        <p>${obj.title}</p>
-                                    </div>
+    var host_list = {
+
+    };
+    var project_list = {
+
+    };
+    /*
+    $.ajax({
+        url: '../demodata/post.json',
+        success: function(content) {
+            // var array = JSON.parse(content);
+            console.log(content);
+            // console.log(array);
+            content.forEach(function(index, obj) {
+                $('.container1').append(
+                    `<div class="col-md-3">
+                            <div class="thumbnail">
+                                <img src="${obj.img}" class="img-rounded img-responsive" width="100%"></img>
+                                <div class="caption">
+                                    <p>${obj.title}</p>
                                 </div>
-                            </div>`
-                    );
-                });
-            }
-        })
+                            </div>
+                        </div>`
+                );
+            });
+        }
+    })
 */
+</script>
+
+<script>
+    $(function () {
 
         $.ajax({
             // url: routing.cmd.post,
             // url: routing.cmd.first,
             url: routing.cmd.list,
-            success: function(content) {
+            success: function (content) {
                 // var array = JSON.parse(content);
                 console.log(content);
                 // console.log(array);
-                content.forEach(function(obj, index) {
+                content.forEach(function (obj, index) {
                     // console.log(index);
                     // console.log(obj[index]);
+                    //$('#accordion').append(template.cmd.item);
 
-                    $('#accordion').append(
-                        `   <h3>${obj.cmd}</h3>
-                            <div>
-                                <p>
-                                    ${obj.output}
-                                </p>
-                            </div>`
-                    );
+                    // $('#accordion').append(
+                    // $('#accordion').prepend(
+                    //     `   <h3>${obj.cmd}</h3>
+                    //         <div>
+                    //             <p>
+                    //                 ${obj.output}
+                    //             </p>
+                    //         </div>`
+                    // );
+
                 });
-                $("#accordion").accordion();
+                $("#tabs").tabs(
+                    // {
+                    //     hide: { effect: "explode", duration: 1000 }
+                    // }
+                );
+                loadCmd();
             }
         })
 
+
     });
+
 </script>
 
 <!--
@@ -171,40 +232,462 @@
     // });
 </script>
 
+<style>
+    .row_cmd div.command {
+        float: right;
+        text-align: left;
+        width: 27%;
+    }
 
-<div id="accordion">
+    .row_cmd div.time {
+        float: right;
+        text-align: right;
+        width: 70%;
+    }
+</style>
 
 
-    <h3>Section 3</h3>
-    <div>
-        <p>
-            Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
-            Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
-            ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
-            lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
-        </p>
-        <ul>
-            <li>List item one</li>
-            <li>List item two</li>
-            <li>List item three</li>
-        </ul>
+<script>
+    $(function () {
+        $("#menu").menu({
+            items: "> :not(.ui-widget-header)"
+        });
+    });
+</script>
+
+<style>
+    .ui-menu {
+        width: 200px;
+    }
+
+    .ui-widget-header {
+        padding: 0.2em;
+    }
+</style>
+
+
+<script>
+    $(function () {
+        $(".widget input[type=submit], .widget a, .widget button").button();
+        $("button, input, a").click(function (event) {
+            event.preventDefault();
+        });
+    });
+</script>
+
+
+<h4>DevOpsTerminal</h4>
+
+
+<div id="tabs">
+    <ul>
+        <li><a href="#tabs-1">localhost</a></li>
+        <li><a href="#tabs-2">docker</a></li>
+        <!--<li><a href="#tabs-3">..</a></li>-->
+        <li><a href="#tabs-new">+</a></li>
+    </ul>
+
+    <div id="tabs-1">
+        <h4>Last Sessions</h4>
+
+        <div class="widget">
+            <button>2017</button>
+            <button>2018</button>
+            <button>last Month (50)</button>
+            <button>last Week (20)</button>
+            <button>last 3 days (6)</button>
+            <button>yesterday (5)</button>
+            <button>today (3)</button>
+        </div>
+
+        <h4>Projects</h4>
+
+        <div class="widget">
+
+
+            <button>docker</button>
+            <button>composer</button>
+            <button>artisan</button>
+            <button>MySQL</button>
+
+            <!--<div>-->
+            <!--<a href="#">-->
+            <div class="create_new_project">
+                <label for="project">New Project</label>
+                <input type="text" name="project" id="project">
+                <input type="submit" value="create">
+            </div>
+            <!--</a>-->
+            <!--<a href="#">-->
+            <!--Create From ...-->
+            <!--</a>-->
+            <!--</div>-->
+        </div>
+
+        <!--<ul id="menu">-->
+        <!--<li class="ui-widget-header">-->
+        <!--<div>Category 1</div>-->
+        <!--</li>-->
+        <!--<li>-->
+        <!--<div>Option 1</div>-->
+        <!--</li>-->
+        <!--<li>-->
+        <!--<div>Option 2</div>-->
+        <!--</li>-->
+        <!--<li>-->
+        <!--<div>Option 3</div>-->
+        <!--</li>-->
+        <!--<li class="ui-widget-header">-->
+        <!--<div>Category 2</div>-->
+        <!--</li>-->
+        <!--<li>-->
+        <!--<div>Option 4</div>-->
+        <!--</li>-->
+        <!--<li>-->
+        <!--<div>Option 5</div>-->
+        <!--</li>-->
+        <!--<li>-->
+        <!--<div>Option 6</div>-->
+        <!--</li>-->
+        <!--</ul>-->
+
+        <h4>Commands & Scripts</h4>
+
+
+        <div id="accordion">
+
+
+            <h3 class="row_cmd">
+                <div class="time">today 15:24</div>
+                <div class="command">chmod -R 4777 /root</div>
+            </h3>
+
+            <p>
+                Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+                Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+                ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+                lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+            </p>
+
+
+            <h3>
+                <label for="command">New command</label>
+                <input type="text" name="command" id="command">
+                <input type="submit" value="execute">
+            </h3>
+            <div>
+                <h4>What eman this command, how to use</h4>
+                <p>
+                <pre>chmod [options] mode file1 …</pre>
+                <a href="https://de.wikipedia.org/wiki/Chmod">wiki chmod</a>
+                </p>
+                <h4>Try to use another used before command</h4>
+                <p>
+                    Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+                    et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+                    faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+                    mauris vel est.
+                </p>
+                <h4>Try to use script from this project</h4>
+                <p>
+                    Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                    inceptos himenaeos.
+                </p>
+                <ul>
+                    <li>List item one</li>
+                    <li>List item two</li>
+                    <li>List item three</li>
+                </ul>
+            </div>
+
+        </div>
     </div>
-    <h3>Section 4</h3>
-    <div>
-        <p>
-            Cras dictum. Pellentesque habitant morbi tristique senectus et netus
-            et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
-            faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
-            mauris vel est.
-        </p>
-        <p>
-            Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
-            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-            inceptos himenaeos.
+
+    <div id="tabs-2">
+        <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc.
+            Duis
+            scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut
+            tempus
+            eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam.
+            Praesent
+            in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel
+            metus.
+            Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus
+            pellentesque
+            pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et
+            purus.
         </p>
     </div>
-</div>
 
 
+    <div id="tabs-new">
+
+        <form action="#" class="contact-form">
+            <div class="create_new_host widget form">
+
+                <div class="input group">
+                    <div class="input name">
+                        <label for="hostname">Hostname</label>
+                    </div>
+                    <div class="input value">
+                        <input type="text" name="hostname" id="hostname">
+                    </div>
+                </div>
+
+                <div class="input group">
+                    <div class="input name">
+                        <label for="user">Username</label>
+                    </div>
+                    <div class="input value">
+                        <input type="text" name="user" id="user">
+                    </div>
+
+                </div>
+
+                <div class="input group">
+                    <div class="input name">
+                        <label for="password">Password</label>
+                    </div>
+                    <div class="input value">
+                        <input type="text" name="password" id="password">
+                    </div>
+                </div>
+
+
+                <div class="input group">
+                    <div class="input name">
+                        <label for="port">Port</label>
+                    </div>
+                    <div class="input value">
+                        <input type="text" name="port" id="port">
+                    </div>
+
+                </div>
+
+                <div class="input group">
+                    <div class="input name">
+                    </div>
+                    <div class="input value">
+                        <input type="submit" id="create_host"  class="create_host" name="create_host" value="Create New Host"
+                        >
+                        onclick="handleFormSubmit()"
+
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <textarea class="results__display"></textarea>
+        <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla
+            facilisi.
+            Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis,
+            pede
+            vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec
+            non
+            libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae,
+            pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in
+            lacus.
+            Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+    </div>
+
+
+    <script>
+        /**
+         * Checks that an element has a non-empty `name` and `value` property.
+         * @param  {Element} element  the element to check
+         * @return {Bool}             true if the element is an input, false if not
+         */
+        var isValidElement = function isValidElement(element) {
+            return element.name && element.value;
+        };
+
+        /**
+         * Checks if an element’s value can be saved (e.g. not an unselected checkbox).
+         * @param  {Element} element  the element to check
+         * @return {Boolean}          true if the value should be added, false if not
+         */
+        var isValidValue = function isValidValue(element) {
+            return !['checkbox', 'radio'].includes(element.type) || element.checked;
+        };
+
+        /**
+         * Checks if an input is a checkbox, because checkboxes allow multiple values.
+         * @param  {Element} element  the element to check
+         * @return {Boolean}          true if the element is a checkbox, false if not
+         */
+        var isCheckbox = function isCheckbox(element) {
+            return element.type === 'checkbox';
+        };
+
+        /**
+         * Checks if an input is a `select` with the `multiple` attribute.
+         * @param  {Element} element  the element to check
+         * @return {Boolean}          true if the element is a multiselect, false if not
+         */
+        var isMultiSelect = function isMultiSelect(element) {
+            return element.options && element.multiple;
+        };
+
+        /**
+         * Retrieves the selected options from a multi-select as an array.
+         * @param  {HTMLOptionsCollection} options  the options for the select
+         * @return {Array}                          an array of selected option values
+         */
+        var getSelectValues = function getSelectValues(options) {
+            return [].reduce.call(options, function (values, option) {
+                return option.selected ? values.concat(option.value) : values;
+            }, []);
+        };
+
+        /**
+         * A more verbose implementation of `formToJSON()` to explain how it works.
+         *
+         * NOTE: This function is unused, and is only here for the purpose of explaining how
+         * reducing form elements works.
+         *
+         * @param  {HTMLFormControlsCollection} elements  the form elements
+         * @return {Object}                               form data as an object literal
+         */
+        var formToJSON_deconstructed = function formToJSON_deconstructed(elements) {
+
+            // This is the function that is called on each element of the array.
+            var reducerFunction = function reducerFunction(data, element) {
+
+                // Add the current field to the object.
+                data[element.name] = element.value;
+
+                // For the demo only: show each step in the reducer’s progress.
+                console.log(JSON.stringify(data));
+
+                return data;
+            };
+
+            // This is used as the initial value of `data` in `reducerFunction()`.
+            var reducerInitialValue = {};
+
+            // To help visualize what happens, log the inital value, which we know is `{}`.
+            console.log('Initial `data` value:', JSON.stringify(reducerInitialValue));
+
+            // Now we reduce by `call`-ing `Array.prototype.reduce()` on `elements`.
+            var formData = [].reduce.call(elements, reducerFunction, reducerInitialValue);
+
+            // The result is then returned for use elsewhere.
+            return formData;
+        };
+
+        /**
+         * Retrieves input data from a form and returns it as a JSON object.
+         * @param  {HTMLFormControlsCollection} elements  the form elements
+         * @return {Object}                               form data as an object literal
+         */
+        var formToJSON = function formToJSON(elements) {
+            return [].reduce.call(elements, function (data, element) {
+
+                // Make sure the element has the required properties and should be added.
+                if (isValidElement(element) && isValidValue(element)) {
+
+                    /*
+                                                                          * Some fields allow for more than one value, so we need to check if this
+                                                                          * is one of those fields and, if so, store the values as an array.
+                                                                          */
+                    if (isCheckbox(element)) {
+                        data[element.name] = (data[element.name] || []).concat(element.value);
+                    } else if (isMultiSelect(element)) {
+                        data[element.name] = getSelectValues(element);
+                    } else {
+                        data[element.name] = element.value;
+                    }
+                }
+
+                return data;
+            }, {});
+        };
+
+        /**
+         * A handler function to prevent default submission and run our custom script.
+         * @param  {Event} event  the submit event triggered by the user
+         * @return {void}
+         */
+        var handleFormSubmit = function handleFormSubmit(event) {
+            console.log('handleFormSubmit');
+
+            // Stop the form from submitting since we’re handling that with AJAX.
+            event.preventDefault();
+
+            // Call our function to get the form data.
+            var data = formToJSON(form.elements);
+
+            // Demo only: print the form data onscreen as a formatted JSON object.
+            var dataContainer = document.getElementsByClassName('results__display')[0];
+
+            // Use `JSON.stringify()` to make the output valid, human-readable JSON.
+            dataContainer.textContent = JSON.stringify(data, null, "  ");
+
+            // ...this is where we’d actually do something with the form data...
+        };
+
+        var createNewProject = function handleFormSubmit(event) {
+            console.log('createNewProject');
+
+            // Stop the form from submitting since we’re handling that with AJAX.
+            event.preventDefault();
+
+            // Call our function to get the form data.
+            var data = formToJSON(form.elements);
+            var projectname = data.hostname;
+            console.log(projectname);
+            var no = 3;
+            // console.log($('li #tabs-3').parent());
+
+            // $('li #tabs-new').parent().append('<li><a href="#tabs-2">' + projectname + '</a></li>');
+            // $('li a[href=tabs-3]').parent().html('<li><a href="#tabs-3">projectname </a></li>');
+            $('#tabs li a').parents('ul').prepend('<li><a href="#tabs-' + no + '">' + projectname + '</a></li>');
+            $('#tabs').append('<div id="tabs-' + no + '"><p>test   </p>         </div>');
+             $("#tabs").tabs( "refresh" );
+            // var current_index = $("#tabs").tabs("option","active");
+            // $("#tabs").tabs('load',current_index);
+
+           // var tab = $('#tabs').tabs('getSelected');
+           //  tab.panel('refresh');
+        };
+
+        /*
+            * This is where things actually get started. We find the form element using
+            * its class name, then attach the `handleFormSubmit()` function to the
+            * `submit` event.
+            */
+        var form = document.getElementsByClassName('contact-form')[0];
+        var form_submit = document.getElementsByClassName('create_host')[0];
+        console.log(form);
+        form_submit.addEventListener('click', createNewProject);
+
+        // ROUTING dla eventow z formularza
+
+    </script>
+
+    <style>
+        .form .input.group {
+            /*float: none;*/
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .form .input {
+            display: inline-block;
+            /*float: left;*/
+        }
+
+        .form .input.name {
+            width: 120px;
+            /*float: left;*/
+        }
+
+        .form .input.value {
+            width: 200px;
+            /*float: right;*/
+
+        }
+    </style>
 </body>
 </html>

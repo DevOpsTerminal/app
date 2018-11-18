@@ -1,15 +1,18 @@
 [
   {
+    "time": "yesterday, 14:00",
     "cmd": "mysql_backup.sh",
     "input": "db export > file.sql",
     "output": "Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit  amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate."
   },
   {
+    "time": "yesterday, 14:02",
     "cmd": "mysql_restore.sh",
     "input": "db export > file.sql",
     "output": "Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit  amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate."
   },
   {
+    "time": "yesterday, 14:06",
     "cmd": "www_update.sh",
     "input": "db export > file.sql",
     "output": "Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit  amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate."
