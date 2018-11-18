@@ -1,6 +1,7 @@
 # DevOpsTerminal | DOT
 Terminal with Web Interface for any team - Let's work in terminal together
 ![screen](/docs/img/chrome_2018-11.png)
+![screen](/docs/img/chrome_2018-11-18_green.png)
 
 # Git profile & repositories
 https://github.com/DevOpsTerminal
