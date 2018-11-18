@@ -1,13 +1,20 @@
+// DEFAULT VALUES
+
+$(function () {
+    // $('.project_list button:first').click();
+    OpenProjectCmd();
+
+    $('.project_list button:first').addClass('ui-state-active');
+    $('.history_list button:first').addClass('ui-state-active');
+
+});
+
 
 // Open Project Cmd
-
 function OpenProjectCmd() {
     console.log('OpenProjectCmd');
     $(".project_cmd").slideDown("fast");
-    $(".history_cmd").slideUp("fast");
-
-    // $(".project_cmd").show();
-    // $(".history_cmd").hide();
+    // $(".history_cmd").slideUp("fast");
 }
 
 
@@ -15,20 +22,18 @@ function OpenProjectCmd() {
 function OpenHistoryCmd() {
     console.log('OpenHistoryCmd');
     $(".project_cmd").slideUp("fast");
-    $(".history_cmd").slideDown("fast");
-    // $(".project_cmd").hide();
-    // $(".history_cmd").show();
+    // $(".history_cmd").slideDown("fast");
 }
 
 // Events
 
 $('.project_list button').on('click', function () {
-    OpenProjectCmd();
+        OpenProjectCmd();
     }
 );
 
 $('.history_list button').on('click', function () {
-    OpenHistoryCmd();
+        // OpenHistoryCmd();
     }
 );
 
@@ -55,9 +60,9 @@ $('#create_new_project_button').on('click', function () {
             // $('#project_name').val()
             // tooltips.tooltip("open");
             $('#project_name')
-                .animate({borderColor:'red'}, 900)
+                .animate({borderColor: 'red'}, 900)
                 .delay(100)
-                .animate({borderColor:'black'}, 100);
+                .animate({borderColor: 'black'}, 100);
             // $('#project_name').effect("highlight", {}, 1000);
         }
     }

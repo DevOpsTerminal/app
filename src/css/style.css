@@ -21,7 +21,7 @@ body {
     display: inline-block;
     bottom: 0;
     width: 100%;
-
+    font-family: Calibri;
 }
 
 .top_menu > * {
@@ -37,8 +37,7 @@ body {
 }
 
 .top_menu .project_name {
-    font-family: Calibri;
-    font-size: 50px;
+    font-size: 40px;
     color: #9dd96d;
     line-height: 70px;
 }

@@ -6,8 +6,8 @@
     <title>jQuery UI Accordion - Default functionality</title>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <!--<link rel="stylesheet" href="/resources/demos/style.css">-->
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!--<script-->
     <!--src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"-->
     <!--integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="-->
@@ -58,7 +58,7 @@
                     // console.log(obj[index]);
                     //$('#accordion').append(template.cmd.item);
 
-                    $('#history_accordion').prepend(
+                    $('#project_accordion').prepend(
                         `<h3 class="row_cmd"><div class="time">${obj.time}</div><div class="command">${obj.cmd}</div></h3>
                         <div>
                             <p>
@@ -80,7 +80,7 @@
                     }
                 });
 
-                OpenHistoryCmd();
+                // OpenHistoryCmd();
 
             }
         })
@@ -275,86 +275,22 @@
 <div id="tabs">
     <ul>
         <li><a href="#tabs-1">localhost</a></li>
-        <li><a href="#tabs-2">docker</a></li>
+        <li><a href="#tabs-2">test</a></li>
+        <li><a href="#tabs-4">production</a></li>
         <!--<li><a href="#tabs-3">..</a></li>-->
         <li><a href="#tabs-new">+</a></li>
     </ul>
 
     <div id="tabs-1" class="mtab">
-        <h3 class="first">Last Sessions</h3>
-
-        <div class="widget">
-            <div class="history_list">
-                <button class="active" aria-selected="true">today (3)</button>
-                <button>yesterday (5)</button>
-                <button>last 3 days (6)</button>
-                <button>last Week (20)</button>
-                <button>last Month (50)</button>
-                <button>2018</button>
-                <button>2017</button>
-            </div>
-
-        </div>
-
-        <div class="history_cmd">
-
-            <h3>Commands & Scripts</h3>
-
-            <div id="history_accordion">
-
-                <h3 class="row_cmd">
-                    <div class="time">today 15:24</div>
-                    <div class="command">chmod -R 4777 /root</div>
-                </h3>
-
-                <p>
-                    Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
-                    Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
-                    ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
-                    lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
-                </p>
 
 
-                <h3>
-                    <label for="command">New command</label>
-                    <input type="text" name="command" id="command">
-                    <input type="submit" value="execute">
-                </h3>
-                <div>
-                    <h4>What eman this command, how to use</h4>
-                    <p>
-                    <pre>chmod [options] mode file1 …</pre>
-                    <a href="https://de.wikipedia.org/wiki/Chmod">wiki chmod</a>
-                    </p>
-                    <h4>Try to use another used before command</h4>
-                    <p>
-                        Cras dictum. Pellentesque habitant morbi tristique senectus et netus
-                        et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
-                        faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
-                        mauris vel est.
-                    </p>
-                    <h4>Try to use script from this project</h4>
-                    <p>
-                        Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
-                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-                        inceptos himenaeos.
-                    </p>
-                    <ul>
-                        <li>List item one</li>
-                        <li>List item two</li>
-                        <li>List item three</li>
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-
-        <hr>
         <h3>Projects</h3>
 
         <div class="create_new_project_area">
 
             <div class="project_list">
+                <button class="ui-button ui-corner-all ui-widget">all</button>
+                <button class="ui-button ui-corner-all ui-widget">root</button>
                 <button class="ui-button ui-corner-all ui-widget">docker</button>
                 <button class="ui-button ui-corner-all ui-widget">composer</button>
                 <button class="ui-button ui-corner-all ui-widget">artisan</button>
@@ -422,6 +358,21 @@
                     </ul>
                 </div>
 
+            </div>
+
+        </div>
+
+        <h3 class="first">Last Sessions</h3>
+
+        <div class="widget">
+            <div class="history_list">
+                <button>today (3)</button>
+                <button>yesterday (5)</button>
+                <button>last 3 days (6)</button>
+                <button>last Week (20)</button>
+                <button>last Month (50)</button>
+                <button>2018</button>
+                <button>2017</button>
             </div>
 
         </div>
@@ -497,7 +448,6 @@
                         <input type="submit" id="create_host" class="create_host" name="create_host"
                                value="Create New Host"
                         >
-                        onclick="handleFormSubmit()"
 
                     </div>
                 </div>
@@ -512,7 +462,7 @@
     </div>
 </div>
 
-<link rel="stylesheet" href="css/style.css">
+<link href="css/style.css" rel="stylesheet">
 <script src="js/form_submit.js"></script>
 <script src="js/project.js"></script>
 
