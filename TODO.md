@@ -35,7 +35,12 @@ span class="ui-icon ui-icon-arrowthick-1-n"></span>
 + Ladowanie popularnych aplikacji, prosta instalacja poprzez klikniecie
 + ikonki
 
-## Obsluga natywna
+## Serwery: wyszukiwanie w sieci urzadzen, ikona, selectlist [auto]
++ domylsne ustawienia dla np. routera
++ robienie firmware dla natywnego urzadzenia
+
+
+## Projekty: Obsluga natywna, ikona, selectlist [auto]
 + git
 + composer
 + laravel
