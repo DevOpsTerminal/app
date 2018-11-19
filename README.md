@@ -7,7 +7,7 @@
 
 Terminal with Web Interface for any team - Let's work in terminal together
 
-## Cel projektu
+## :cloud: Cel projektu
 
 Celem jest stworzenie nakladki na terminal, ktory bedzie wykonywal skrypty i wczesniej zdefiniowane komendy
 na maszynach lokalnych i zdalnych.
@@ -45,7 +45,7 @@ https://github.com/DevOpsTerminal
 The frontend side of application, with jquery plugin and html, json technologies
 
 
-## :cloud: Installation
+## Installation
 ### How to install with [apicra](https://apicra.com/) (not depends system)
 
     apicra install
