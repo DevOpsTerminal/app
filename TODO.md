@@ -1,4 +1,11 @@
 
+## Mobile Version
+### CLick on the bar accordion
+should be possible to click - show/close the accordion
+in mobile version it's helpfull to see all menu
+### Icon and menu on TopMenu
+smaller name and icon: resize to 32px
+
 ## Icons for create new and replay command
 https://api.jqueryui.com/theming/icons/
 - play ui-icon-play 
