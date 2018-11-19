@@ -74,7 +74,17 @@ static json answer for demo ajax reqest
 ### :heavy_check_mark: or info If everything fine
 more icons: https://gist.github.com/rxaviers/7360908
 
+## :memo: Documentation
 More info: [DOCS](DOCS.md)
 
+
+## :scroll: License
+
+[MIT][license] © [DEVOPSTERMINAL][website]
+
+[license]: http://showalicense.com/?fullname=Bloggify%20%3Csupport%40bloggify.org%3E%20(https%3A%2F%2Fbloggify.org)&year=2016#license-mit
+[website]: https://devopsterminal.com
+[contributing]: /CONTRIBUTING.md
+[docs]: /DOCS.md
 
 
