@@ -64,6 +64,11 @@ tak aby nie zawieral wrazliwych danych jak:
 - Email
 - hash
 
+## How it work'S
+#### :arrow_forward: Start Your command
+
+more icons: https://gist.github.com/rxaviers/7360908
+
 ### Struktura
 Są trzy elementy:
 + serwer na ktorym są wykonywane komendy i skrypty
