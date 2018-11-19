@@ -27,8 +27,26 @@ ui-icon-volume-off
 
 ui-icon-volume-on 
 
+
 ## Example usage
 span class="ui-icon ui-icon-arrowthick-1-n"></span>
+
+## Instalacja aplikacji webowych,etc
++ Ladowanie popularnych aplikacji, prosta instalacja poprzez klikniecie
++ ikonki
+
+## Obsluga natywna
++ git
++ composer
++ laravel
++ docker
+
+## Dodatkowe informacje odnosnie kodu, oraz bledow wystepujacych w konsoli
+
+## Rejestr bledow
+dodatkowy button
+
+
 
 ## DONE
 + jquery ui - application with Accordion
