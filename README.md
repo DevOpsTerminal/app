@@ -25,6 +25,19 @@ tak aby nie zawieral wrazliwych danych jak:
 - Email
 - hash
 
+## Funkcje
++ automatyczne rozpoznawanie i obsluga uslug: 
+ + git
+ + composer
+ + docker
+ + mail
+ + mysql
+ 
++ Wprowadzenie ikon, grupowanie,
++ W ustawieniach mozliwe dostsowanie, ktore rozszerzenia powinny byc proponowane najpierw a ktore ukrywane.
++ stworzenie jednej linii komendy do utowrzenia instancji na kolejnym urzadzeniu, lub zdalne instalowanie jej 
+aby zawsze devopsterminal byl dostepny
+
  
 [www demo](http://app.devopsterminal.com)
 
