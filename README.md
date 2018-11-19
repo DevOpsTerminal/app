@@ -28,6 +28,7 @@ tak aby nie zawieral wrazliwych danych jak:
  
 [www demo](http://app.devopsterminal.com)
 
+## Now Text, later Animation
 ![screen](/docs/img/chrome_2018-11-18_3.png)
 
 [History](HISTORY.md)
