@@ -37,6 +37,14 @@ tak aby nie zawieral wrazliwych danych jak:
 # frontend
 The frontend side of application, with jquery plugin and html, json technologies
 
+Requirements
+
+Marathon requires the following to be installed on your system:
+
+    Swift 4.1 or later (bundled with Xcode 9.3 or later)
+    Git
+    Xcode (if you want to edit scripts using it)
+
 
 ## Installation
 ### How to install with [apicra](https://apicra.com/) (not depends system)
