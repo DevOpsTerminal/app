@@ -33,14 +33,6 @@ tak aby nie zawieral wrazliwych danych jak:
 [History](HISTORY.md)
 
 
-# Git profile & repositories
-https://github.com/DevOpsTerminal
-
-+ [logo](https://devopsterminal.github.io/logo/)
-+ [frontend](https://devopsterminal.github.io/frontend/)
-+ [backend](https://devopsterminal.github.io/backend/)
-+ [swagger](https://devopsterminal.github.io/swagger/)
-
 # frontend
 The frontend side of application, with jquery plugin and html, json technologies
 
@@ -77,6 +69,14 @@ more icons: https://gist.github.com/rxaviers/7360908
 
 ## :memo: Documentation
 More info: [DOCS](DOCS.md)
+
+# More git profile & repositories
+https://github.com/DevOpsTerminal
+
++ [logo](https://devopsterminal.github.io/logo/)
++ [frontend](https://devopsterminal.github.io/frontend/)
++ [backend](https://devopsterminal.github.io/backend/)
++ [swagger](https://devopsterminal.github.io/swagger/)
 
 
 ## :scroll: License
