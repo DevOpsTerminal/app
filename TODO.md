@@ -58,7 +58,20 @@ span class="ui-icon ui-icon-arrowthick-1-n"></span>
 ## Rejestr bledow
 dodatkowy button
 
+## Kolorowanie skladni
+Output z terminala powinien byc kolorowany
 
+## Form-Config
+Generator formualrza dla plikow yaml/json
+aby np ustawienia uslugi byly konfigurowane jako json, z czego beda pobierane dane, na zasadzie:
+
+  object-name-value
+  nazwa pola - wartosci domyslne
+  
+  drugi form bedzie odpowiedzialny za weryfikacje
+  nazwa pola: tablica walidatorow lub funckcie z parapetrami do walidacji pol
+  
+  
 
 ## DONE
 + jquery ui - application with Accordion
