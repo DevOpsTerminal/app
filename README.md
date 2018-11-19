@@ -39,7 +39,7 @@ tak aby nie zawieral wrazliwych danych jak:
 + stworzenie jednej linii komendy do utowrzenia instancji na kolejnym urzadzeniu, lub zdalne instalowanie jej 
 aby zawsze devopsterminal byl dostepny
 
- 
+## Wersja klikalna na app.devopsterminal.com
 [www demo](http://app.devopsterminal.com)
 
 ## Now Text, later Animation
