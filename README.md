@@ -107,16 +107,6 @@ https://github.com/DevOpsTerminal
 
 # Example Data:
 
-## :scroll: License
-
-[MIT][license] © [DEVOPSTERMINAL][website]
-
-[license]: http://showalicense.com/?fullname=Bloggify%20%3Csupport%40bloggify.org%3E%20(https%3A%2F%2Fbloggify.org)&year=2016#license-mit
-[website]: https://devopsterminal.com
-[contributing]: /CONTRIBUTING.md
-[docs]: /DOCS.md
-
-
 
 
 ## :yum: How to contribute
@@ -177,9 +167,9 @@ If you are using this library in one of your projects, add it in this list. :spa
  - [`terminal-sidecar`](https://npmjs.com/package/terminal-sidecar) (by Kyle Kelley)—Jupyter sidecar in your terminal
  - [`tmuxos`](https://github.com/TmuxOS/TmuxOS)—The awesome power of command line is finally revealed.
 
-## :scroll: License
+## :scroll: Support
 
-[MIT][license] © [Ionică Bizău][website]
+[MIT][license] © [Tomasz Sapletta][website]
 
 [badge_patreon]: http://ionicabizau.github.io/badges/patreon.svg
 [badge_amazon]: http://ionicabizau.github.io/badges/amazon.svg
@@ -190,8 +180,15 @@ If you are using this library in one of your projects, add it in this list. :spa
 [paypal-donations]: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RVXDDLKKLQRJW
 [donate-now]: http://i.imgur.com/6cMbHOC.png
 
-[license]: http://showalicense.com/?fullname=Ionic%C4%83%20Biz%C4%83u%20%3Cbizauionica%40gmail.com%3E%20(https%3A%2F%2Fionicabizau.net)&year=2014#license-mit
-[website]: https://ionicabizau.net
+
+
+## :scroll: License
+
+[MIT][license] © [DEVOPSTERMINAL][website]
+
+[license]: http://showalicense.com/?fullname=Bloggify%20%3Csupport%40bloggify.org%3E%20(https%3A%2F%2Fbloggify.org)&year=2016#license-mit
+[website]: https://devopsterminal.com
 [contributing]: /CONTRIBUTING.md
-[docs]: /DOCUMENTATION.md
+[docs]: /DOCS.md
+
 
