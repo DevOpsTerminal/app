@@ -72,6 +72,12 @@ aby np ustawienia uslugi byly konfigurowane jako json, z czego beda pobierane da
   nazwa pola: tablica walidatorow lub funckcie z parapetrami do walidacji pol
   
   
+## Support the git repositories as project
+import/clone
+read readme and show ico an screenshot from repo
+show structure and statistics
+
+
 
 ## DONE
 + jquery ui - application with Accordion
