@@ -8,6 +8,10 @@
 
 Terminal with Web Interface for any team - Let's work in terminal together
 
+## Server Status
+master: [![Build Status](https://travis-ci.org/ucgosupl/mm_legend_v2.svg?branch=master)](https://travis-ci.org/ucgosupl/mm_legend_v2)
+dev: [![Build Status](https://travis-ci.org/ucgosupl/mm_legend_v2.svg?branch=dev)](https://travis-ci.org/ucgosupl/mm_legend_v2)
+
 ## :cloud: Cel projektu
 
 Celem jest stworzenie nakladki na terminal, ktory bedzie wykonywal skrypty i wczesniej zdefiniowane komendy
