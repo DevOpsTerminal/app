@@ -167,7 +167,7 @@ If you are using this library in one of your projects, add it in this list. :spa
  - [`terminal-sidecar`](https://npmjs.com/package/terminal-sidecar) (by Kyle Kelley)—Jupyter sidecar in your terminal
  - [`tmuxos`](https://github.com/TmuxOS/TmuxOS)—The awesome power of command line is finally revealed.
 
-## :scroll: Support
+## :scroll: Authors
 
 [MIT][license] © [Tomasz Sapletta][website]
 
