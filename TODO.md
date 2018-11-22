@@ -77,7 +77,12 @@ import/clone
 read readme and show ico an screenshot from repo
 show structure and statistics
 
-
+## Logi
+czas połaczenia z serwerem
+czas wykonywania komendy
+rezultat: 
++ pozywtywny
++ negatywny
 
 ## DONE
 + jquery ui - application with Accordion
