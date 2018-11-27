@@ -17,6 +17,10 @@ dev: [![Build Status](https://travis-ci.org/ucgosupl/mm_legend_v2.svg?branch=dev
 ![+][support]
 ![docker][docker]
 
+## Fast Deploy on 
+Dokku on Digital Ocean
+
+
 ## :cloud: Cel projektu
 
 Celem jest stworzenie nakladki na terminal, ktory bedzie wykonywal skrypty i wczesniej zdefiniowane komendy
