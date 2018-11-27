@@ -19,6 +19,13 @@ dev: [![Build Status](https://travis-ci.org/ucgosupl/mm_legend_v2.svg?branch=dev
 
 ## Fast Deploy on 
 Dokku on Digital Ocean
+Dokku One-Click Application
+http://dokku.viewdocs.io/dokku/getting-started/installation/#3-deploy-your-first-application
+
+back4app
+https://back4app.com/
+
+
 
 
 ## :cloud: Cel projektu
