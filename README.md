@@ -12,6 +12,9 @@ Terminal with Web Interface for any team - Let's work in terminal together
 master: [![Build Status](https://travis-ci.org/ucgosupl/mm_legend_v2.svg?branch=master)](https://travis-ci.org/ucgosupl/mm_legend_v2)
 dev: [![Build Status](https://travis-ci.org/ucgosupl/mm_legend_v2.svg?branch=dev)](https://travis-ci.org/ucgosupl/mm_legend_v2)
 
+## DevOpsTerminal supporting
+ 	&#x2764; 
+
 ## :cloud: Cel projektu
 
 Celem jest stworzenie nakladki na terminal, ktory bedzie wykonywal skrypty i wczesniej zdefiniowane komendy
@@ -179,6 +182,7 @@ If you are using this library in one of your projects, add it in this list. :spa
 [amazon]: http://amzn.eu/hRo9sIZ
 [paypal-donations]: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RVXDDLKKLQRJW
 [donate-now]: http://i.imgur.com/6cMbHOC.png
+[devopsterminal]: https://devopsterminal.com/wp-content/uploads/2018/11/devops_terminal-cube-green-48.png
 
 
 
