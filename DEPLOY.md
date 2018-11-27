@@ -28,3 +28,19 @@ https://documentation.codeship.com/basic/continuous-deployment/deployment-with-c
 
 nextjs
 react
+
+https://github.com/zeit/simple-now-app
+
+https://github.com/DevOpsTerminal/now-examples
+
+
+## Video's
+https://www.youtube.com/watch?v=TKFi3f_W33k
+https://www.youtube.com/watch?v=QnHch-42Hzw
+https://www.youtube.com/watch?v=c_W8OVdglgA
+https://www.youtube.com/channel/UCLq8gNoee7oXM7MvTdjyQvA
+
+
+
+## Codeship
+https://codeship.com/features/basic
