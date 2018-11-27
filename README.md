@@ -185,7 +185,7 @@ If you are using this library in one of your projects, add it in this list. :spa
 [paypal-donations]: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RVXDDLKKLQRJW
 [donate-now]: http://i.imgur.com/6cMbHOC.png
 [devopsterminal]: https://devopsterminal.com/wp-content/uploads/2018/11/devops_terminal-cube-green-48.png
-[support]: https://devopsterminal.com/wp-content/uploads/2018/11/heart-icon-e1543307419874.png
+[support]: https://devopsterminal.com/wp-content/uploads/2018/11/heart-icon-e1543307753441.png
 [docker]: https://devopsterminal.com/wp-content/uploads/2018/11/docker-icon-1-e1543307587610.png
 
 ## :scroll: License
