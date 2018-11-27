@@ -20,3 +20,5 @@ https://www.youtube.com/channel/UCLq8gNoee7oXM7MvTdjyQvA
 ## Codeship
 https://codeship.com/
 
+
+https://documentation.codeship.com/basic/continuous-deployment/deployment-with-custom-scripts/
