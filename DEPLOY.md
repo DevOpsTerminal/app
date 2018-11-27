@@ -14,3 +14,9 @@ Test your app against new Node.js version without installing it
 
 ##  ZEIT
 https://zeit.co/github-setup
+
+https://www.youtube.com/channel/UCLq8gNoee7oXM7MvTdjyQvA
+
+## Codeship
+https://codeship.com/
+
