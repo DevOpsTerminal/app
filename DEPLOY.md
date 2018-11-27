@@ -22,3 +22,9 @@ https://codeship.com/
 
 
 https://documentation.codeship.com/basic/continuous-deployment/deployment-with-custom-scripts/
+
+
+## FAST DEPLOYMENT with nodejs and react
+
+nextjs
+react
