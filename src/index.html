@@ -19,7 +19,43 @@
 <!--<iframe id="iframe" src="template/cmd_list.html" width="480" height="320" scrolling="no" frameborder="0"></iframe>-->
 <!--<script src="template/cmd_list.html" id="cmd_list" type="template"></script>-->
 
+<script type="text/javascript" src="js/jsonify.js"></script>
+
 <script>
+    // TODO: form with json
+    // https://github.com/kushalpandya/JSONify
+    /*
+    Include in your webpage as:
+
+Your form in page:
+
+<form id="myform">
+    <label>Name:</label>
+    <input type="text" name="name"/>
+    <label>Email</label>
+    <input type="text" name="email"/>
+    <label>Password</label>
+    <input type="password" name="password"/>
+</form>
+Calling jsonify() as follows:
+
+$("#myform").jsonify();
+Returned JSON string:
+
+{"name":"Kushal","email":"catchmeifyoucan@gmail.com","password":"awesome"}
+Calling dejsonify() as follows:
+
+$("#myform").dejsonify({
+"name": "Kushal",
+"email": "catchmeifyoucan@gmail.com",
+"password": "awesome"
+});
+     */
+
+
+
+
+
     var myData = {
         categories: [
             {
@@ -190,7 +226,9 @@
                     // $('.project-list').prepend(${obj.id});
                 });
 
-                $("#tabs").tabs();
+                $("#tabs").tabs({
+                    active: 1
+                });
             }
         })
     }
