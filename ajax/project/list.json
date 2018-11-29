@@ -1,14 +1,27 @@
 [
   {
     "id": "1",
-    "name": "Localhost"
+    "name": "MySql",
+    "path": "/usr/mysql"
   },
   {
     "id": "2",
-    "name": "Test"
+    "name": "composer",
+    "path": "/var/www/pro"
   },
   {
     "id": "3",
-    "name": "Docker"
+    "name": "Docker",
+    "path": "/var/www/pro"
+  },
+  {
+    "id": "4",
+    "name": "artisan",
+    "path": "/var/www/pro"
+  },
+  {
+    "id": "5",
+    "name": "git",
+    "path": "/var/www/pro"
   }
 ]

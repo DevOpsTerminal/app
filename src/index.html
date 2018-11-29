@@ -137,6 +137,9 @@
         },
         server: {
             list: '../ajax/server/list.json'
+        },
+        history: {
+            list: '../ajax/history/list.json'
         }
     };
     var host_list = {};
@@ -166,6 +169,27 @@
 </script>
 
 <script>
+    function loadServerList() {
+        $.ajax({
+            url: routing.server.list,
+            success: function (content) {
+                // var array = JSON.parse(content);
+                console.log(content);
+                // console.log(array);
+
+                content.forEach(function (obj, index) {
+                    console.log(index);
+                    console.log(obj);
+                    // console.log(obj[index]);
+                    $('.server-list').prepend(`<li><a href="#tabs-${obj.id}">${obj.name}</a></li>`);
+                    // $('.project-list').prepend(${obj.id});
+                });
+
+                $("#tabs").tabs();
+            }
+        })
+    }
+
     function loadProjectList() {
         $.ajax({
             url: routing.project.list,
@@ -178,11 +202,28 @@
                     console.log(index);
                     console.log(obj);
                     // console.log(obj[index]);
-                    $('.project-list').prepend(`<li><a href="#tabs-${obj.id}">${obj.name}</a></li>`);
+                    $('.project-list').prepend(`<button class="ui-button ui-corner-all ui-widget id-${obj.id}">${obj.name}</button>`);
                     // $('.project-list').prepend(${obj.id});
                 });
+            }
+        })
+    }
 
-                $("#tabs").tabs();
+    function loadHistoryList() {
+        $.ajax({
+            url: routing.history.list,
+            success: function (content) {
+                // var array = JSON.parse(content);
+                console.log(content);
+                // console.log(array);
+
+                content.forEach(function (obj, index) {
+                    console.log(index);
+                    console.log(obj);
+                    // console.log(obj[index]);
+                    $('.project-list').prepend(`<button class="ui-button ui-corner-all ui-widget id-${obj.id}">${obj.name}</button>`);
+                    // $('.project-list').prepend(${obj.id});
+                });
             }
         })
     }
@@ -214,7 +255,9 @@
                 });
 
                 loadCmd();
+                loadServerList()
                 loadProjectList();
+
             }
         })
     }
@@ -300,8 +343,8 @@
 
 
 <div id="tabs">
-    <ul class="project-list">
-        <li><a href="#tabs-4">production</a></li>
+    <ul class="server-list">
+        <!--<li><a href="#tabs-4">production</a></li>-->
         <!--<li><a href="#tabs-3">..</a></li>-->
         <li><a href="#tabs-new">+</a></li>
     </ul>
@@ -312,14 +355,9 @@
         <h3>Projects</h3>
 
         <div class="create_new_project_area">
-
-            <div class="project_list many_lines_space">
+            <div class="project-list project_list many_lines_space">
                 <button class="ui-button ui-corner-all ui-widget">all</button>
-                <button class="ui-button ui-corner-all ui-widget">root</button>
-                <button class="ui-button ui-corner-all ui-widget">docker</button>
-                <button class="ui-button ui-corner-all ui-widget">composer</button>
-                <button class="ui-button ui-corner-all ui-widget">artisan</button>
-                <button class="ui-button ui-corner-all ui-widget">MySQL</button>
+
                 <button class="ui-button ui-corner-all ui-widget" id="create_new_project_form">+</button>
             </div>
 
