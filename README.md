@@ -68,7 +68,7 @@ aby zawsze devopsterminal byl dostepny
 [www demo](http://app.devopsterminal.com)
 
 ## Now Text, later Animation
-![screen](/docs/img/chrome_2018-11-18_3.png)
+![screen](/docs/img/chrome_2018-11-29_green.png)
 
 [History](HISTORY.md)
 
