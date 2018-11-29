@@ -1,8 +1,14 @@
-Bootstrap Version:
+### Desktop version:
+electron
+
+### React version:
+nextjs
+
+### Bootstrap Version:
 
 https://pingendo.com/
 
-Editor
+### Editor for frontend
 
 https://mobirise.com/bootstrap-builder/
 
