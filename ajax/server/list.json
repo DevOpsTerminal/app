@@ -1,14 +1,26 @@
 [
   {
     "id": "1",
-    "name": "Localhost"
+    "name": "Localhost",
+    "hostname": "",
+    "username": "",
+    "password": "",
+    "port": ""
   },
   {
     "id": "2",
-    "name": "Test"
+    "name": "Test",
+    "hostname": "",
+    "username": "",
+    "password": "",
+    "port": ""
   },
   {
     "id": "3",
-    "name": "Docker"
+    "name": "Docker",
+    "hostname": "",
+    "username": "",
+    "password": "",
+    "port": ""
   }
 ]

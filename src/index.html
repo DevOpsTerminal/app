@@ -59,7 +59,12 @@
                     //$('#accordion').append(template.cmd.item);
 
                     $('#project_accordion').prepend(
-                        `<h3 class="row_cmd"><div class="time">${obj.time}</div><div class="command">${obj.cmd}</div></h3>
+                        `<h3 class="row_cmd">
+                            <div class="time">${obj.time}</div>
+                            <div class="command">${obj.cmd}</div>
+                            <div class="stop"><button>[stop]</button></div>
+                            <div class="start"><button>[ start ]</button></div>
+                        </h3>
                         <div>
                             <p>
                                 ${obj.output}
@@ -221,7 +226,7 @@
                     console.log(index);
                     console.log(obj);
                     // console.log(obj[index]);
-                    $('.project-list').prepend(`<button class="ui-button ui-corner-all ui-widget id-${obj.id}">${obj.name}</button>`);
+                    $('.history_list').append(`<button class="ui-button ui-corner-all ui-widget id-${obj.id}">${obj.name} (${obj.no})</button>`);
                     // $('.project-list').prepend(${obj.id});
                 });
             }
@@ -255,9 +260,9 @@
                 });
 
                 loadCmd();
-                loadServerList()
+                loadServerList();
                 loadProjectList();
-
+                loadHistoryList();
             }
         })
     }
@@ -393,17 +398,17 @@
 
             <div id="project_accordion">
 
-                <h3 class="row_cmd">
-                    <div class="time">today 15:24</div>
-                    <div class="command">chmod -R 4777 /root</div>
-                </h3>
+                <!--<h3 class="row_cmd">-->
+                    <!--<div class="time">today 15:24</div>-->
+                    <!--<div class="command">chmod -R 4777 /root</div>-->
+                <!--</h3>-->
 
-                <p>
-                    Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
-                    Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
-                    ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
-                    lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
-                </p>
+                <!--<p>-->
+                    <!--Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.-->
+                    <!--Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero-->
+                    <!--ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis-->
+                    <!--lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.-->
+                <!--</p>-->
 
 
                 <h3>
@@ -441,15 +446,10 @@
 
         </div>
 
-        <h3 class="first">Last Sessions</h3>
+        <h3 class="last_session">Last Sessions</h3>
 
         <div class="widget">
             <div class="history_list many_lines_space">
-                <button>today (3)</button>
-                <button>yesterday (5)</button>
-                <button>last 3 days (6)</button>
-                <button>last Week (20)</button>
-                <button>last Month (50)</button>
                 <!--<button>2018</button>-->
                 <!--<button>2017</button>-->
             </div>

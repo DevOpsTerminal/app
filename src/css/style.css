@@ -44,6 +44,7 @@ body {
     color: #9dd96d;
     line-height: 48px;
 }
+
 .top_menu .link {
     font-size: 30px;
     color: #9dd96d;
@@ -51,18 +52,20 @@ body {
     margin-right: 15px;
 }
 
-.top_menu .link a{
-    color: #9dd96d;
-}
-.top_menu .link a :visited{
+.top_menu .link a {
     color: #9dd96d;
 }
 
-.top_menu .project_name a{
+.top_menu .link a :visited {
+    color: #9dd96d;
+}
+
+.top_menu .project_name a {
     color: #9dd96d;
     text-decoration: none;
 }
-.top_menu .project_name a :visited{
+
+.top_menu .project_name a :visited {
     color: #9dd96d;
 }
 
@@ -76,22 +79,24 @@ body {
     color: #ffffff;
 }
 
-.many_lines_space button{
+.many_lines_space button {
     margin-bottom: 9px;
 }
 
 /*
     TABS
 */
-.mtab h3.first{
+.mtab h3.first {
     margin-top: 0.1em;
 }
-.mtab h3{
+
+.mtab h3 {
     line-height: 100%;
     padding: 0;
     margin: 0.5em 0 0.1em 0;
     color: #b3b3b3;
 }
+
 .ui-tabs .ui-tabs-panel {
     padding: 0.3em 0.4em;
 }
@@ -100,6 +105,26 @@ body {
 /*
     ACCORDION
  */
+.row_cmd div.start button,
+.row_cmd div.stop button {
+    padding: 1px;
+    margin: -5px 0px 0px 0px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.row_cmd div.start {
+    float: right;
+    text-align: left;
+    width: 10%;
+}
+
+.row_cmd div.stop {
+    float: right;
+    text-align: left;
+    width: 10%;
+}
+
 .row_cmd div.command {
     float: right;
     text-align: left;
@@ -109,8 +134,9 @@ body {
 .row_cmd div.time {
     float: right;
     text-align: right;
-    width: 70%;
+    width: 45%;
 }
+
 @media only screen and (max-width: 600px) {
     .row_cmd div.command {
         width: 55%;
@@ -151,6 +177,6 @@ body {
     AREA
  */
 
-.create_new_project_area{
+.create_new_project_area {
     /*background-color: #5c5c5c;*/
 }
