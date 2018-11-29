@@ -131,6 +131,12 @@
             first: '../ajax/cmd/1.json',
             post: '../ajax/cmd/post.json',
             list: '../ajax/cmd/list.json'
+        },
+        project: {
+            list: '../ajax/project/list.json'
+        },
+        server: {
+            list: '../ajax/server/list.json'
         }
     };
     var host_list = {};
@@ -160,8 +166,28 @@
 </script>
 
 <script>
-    $(function () {
+    function loadProjectList() {
+        $.ajax({
+            url: routing.project.list,
+            success: function (content) {
+                // var array = JSON.parse(content);
+                console.log(content);
+                // console.log(array);
 
+                content.forEach(function (obj, index) {
+                    console.log(index);
+                    console.log(obj);
+                    // console.log(obj[index]);
+                    $('.project-list').prepend(`<li><a href="#tabs-${obj.id}">${obj.name}</a></li>`);
+                    // $('.project-list').prepend(${obj.id});
+                });
+
+                $("#tabs").tabs();
+            }
+        })
+    }
+
+    function loadPage() {
         $.ajax({
             // url: routing.cmd.post,
             // url: routing.cmd.first,
@@ -186,16 +212,15 @@
                     // );
 
                 });
-                $("#tabs").tabs(
-                    // {
-                    //     hide: { effect: "explode", duration: 1000 }
-                    // }
-                );
+
                 loadCmd();
+                loadProjectList();
             }
         })
+    }
 
-
+    $(function () {
+        loadPage();
     });
 
 </script>
@@ -262,7 +287,7 @@
         </a>
     </div>
     <div class="link config">
-        <a href="#about">
+        <a href="#config">
             Config
         </a>
     </div>
@@ -275,9 +300,7 @@
 
 
 <div id="tabs">
-    <ul>
-        <li><a href="#tabs-1">localhost</a></li>
-        <li><a href="#tabs-2">test</a></li>
+    <ul class="project-list">
         <li><a href="#tabs-4">production</a></li>
         <!--<li><a href="#tabs-3">..</a></li>-->
         <li><a href="#tabs-new">+</a></li>
