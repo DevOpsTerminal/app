@@ -3,7 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>jQuery UI Accordion - Default functionality</title>
+
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <!--<link rel="stylesheet" href="/resources/demos/style.css">-->
     <script src="//code.jquery.com/jquery-1.12.4.js"></script>
@@ -12,6 +14,7 @@
     <!--src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"-->
     <!--integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="-->
     <!--crossorigin="anonymous"></script>-->
+
     <script src="js/command.js"></script>
     <script src="js/project.js"></script>
 </head>
@@ -23,23 +26,26 @@
 <!--<iframe id="iframe" src="template/cmd_list.html" width="480" height="320" scrolling="no" frameborder="0"></iframe>-->
 <!--<script src="template/cmd_list.html" id="cmd_list" type="template"></script>-->
 
-<!--<script type="text/javascript" src="js/jsonify.js"></script>-->
+<!--<script type="text/javascript" src="js/jquery.jsonify-0.3.2.min.js"></script>-->
+
 
 <script>
+
     $(document).ready(function () {
         setTimeout(function () {
             // document.getElementById('content_body').style.display='block';
+            // $('#content_body').css('display', '');
             $('#content_body').show();
             $('.waiting_for_content').hide();
         }, 700);
     });
 
-    var hideBody = function () {
-        setTimeout(function () {
-            document.getElementById('content_body').style.display = 'auto';
-        }, 1000);
-        return false;
-    };
+    // var hideBody = function () {
+    //     setTimeout(function () {
+    //         document.getElementById('content_body').style.display = 'auto';
+    //     }, 1000);
+    //     return false;
+    // };
 
     // hideBody();
 
@@ -125,17 +131,14 @@ $("#myform").dejsonify({
                             </p>
                         </div>`
                     );
-                    triggerOnButtons();
-                });
-                $("#history_accordion").accordion({
-                    animate: {
-                        duration: 200
-                    }
                 });
 
+                triggerOnButtons();
+
+                // $("#project_accordion").accordion();
                 $("#project_accordion").accordion({
                     animate: {
-                        duration: 200
+                        duration: 100
                     }
                 });
 
@@ -192,6 +195,10 @@ $("#myform").dejsonify({
             post: '../ajax/cmd/post.json',
             list: '../ajax/cmd/list.json'
         },
+        execute: {
+            script: "../ajax/execute/",
+            command: "../ajax/execute/mysql_restore.sh"
+        },
         project: {
             list: '../ajax/project/list.json'
         },
@@ -240,8 +247,8 @@ $("#myform").dejsonify({
                 // console.log(array);
 
                 content.forEach(function (obj, index) {
-                    console.log(index);
-                    console.log(obj);
+                    // console.log(index);
+                    // console.log(obj);
                     // console.log(obj[index]);
                     $('.server-list').prepend(`<li><a href="#tabs-${obj.id}">${obj.name}</a></li>`);
                     // $('.project-list').prepend(${obj.id});
@@ -263,8 +270,8 @@ $("#myform").dejsonify({
                 // console.log(array);
 
                 content.forEach(function (obj, index) {
-                    console.log(index);
-                    console.log(obj);
+                    // console.log(index);
+                    // console.log(obj);
                     // console.log(obj[index]);
                     $('.project-list').prepend(`<button class="ui-button ui-corner-all ui-widget id-${obj.id}">${obj.name}</button>`);
                     // $('.project-list').prepend(${obj.id});
@@ -282,12 +289,23 @@ $("#myform").dejsonify({
                 // console.log(array);
 
                 content.forEach(function (obj, index) {
-                    console.log(index);
-                    console.log(obj);
+                    // console.log(index);
+                    // console.log(obj);
                     // console.log(obj[index]);
                     $('.history_list').append(`<button class="ui-button ui-corner-all ui-widget id-${obj.id}">${obj.name} (${obj.no})</button>`);
                     // $('.project-list').prepend(${obj.id});
                 });
+
+                $("#history_accordion").accordion({
+                    animate: {
+                        duration: 200
+                    }
+                });
+
+                setTimeout(function () {
+
+                }, 200);
+
             }
         })
     }
@@ -608,7 +626,7 @@ $("#myform").dejsonify({
 </div>
 
 <link href="css/style.css" rel="stylesheet">
-<script src="js/form_submit.js"></script>
+<!--<script src="js/form_submit.js"></script>-->
 
 
 </body>

@@ -73,7 +73,11 @@ function startCommand(button) {
 
     // Create Request
     var command_name = $(button).parents('.row_cmd').find('.command').text();
-    executeCommand(command_name);
+    var command_output = $(button).parents('.row_cmd').attr('aria-controls');
+    var element = $('#' + command_output + ' p');
+
+    executeCommand(command_name, element);
+
 
 }
 
@@ -94,15 +98,21 @@ function stopCommand(button) {
 }
 
 
-function executeCommand(command) {
+function executeCommand(command, element) {
+
+    console.log(element);
     console.log(command);
-    var execute_url = routing.cmd.execute;
-    // execute_url += '/' + command;
+    var execute_url = routing.execute.script;
+    execute_url += command;
+    console.log(execute_url);
+
     $.ajax({
         url: execute_url,
         success: function (content) {
-            // var array = JSON.parse(content);
-            console.log(content);
+            var array = JSON.parse(content);
+            console.log(array.output);
+            // console.log(content);
+            $(element).html(array.output);
             // console.log(array);
         }
     })
@@ -114,6 +124,16 @@ $(document).ready(function () {
 });
 
 function triggerOnButtons() {
+
+
+    $('.row_cmd').on('click', function (event) {
+        // event.preventDefault();
+        // fix accordion jquery UI
+        setTimeout(function () {
+            $("#project_accordion div[aria-hidden=false]").css('display','').css('height','auto');
+        }, 150);
+    });
+
 
     if ($('.start button').length > 0) {
 
