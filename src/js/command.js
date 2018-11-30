@@ -71,6 +71,10 @@ function startCommand(button) {
     buttonDeactive(stop_button);
     // console.log('stop', stop_button);
 
+    // Create Request
+    var command_name = $(button).parents('.row_cmd').find('.command').text();
+    executeCommand(command_name);
+
 }
 
 function stopCommand(button) {
@@ -89,6 +93,20 @@ function stopCommand(button) {
 
 }
 
+
+function executeCommand(command) {
+    console.log(command);
+    var execute_url = routing.cmd.execute;
+    // execute_url += '/' + command;
+    $.ajax({
+        url: execute_url,
+        success: function (content) {
+            // var array = JSON.parse(content);
+            console.log(content);
+            // console.log(array);
+        }
+    })
+}
 
 $(document).ready(function () {
 
