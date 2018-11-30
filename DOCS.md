@@ -1,3 +1,6 @@
+## software requirements specification (SRS)
+http://www.gatherspace.com/static/software_requirement_specification.html
+
 
 ### :open_file_folder: Struktura
 Są trzy elementy:
@@ -8,6 +11,15 @@ Są trzy elementy:
 Gdy konieczne jest wykonywanie wielu powtarzalnych komend na lokalnym czy na zdalnym serwerze
 Wówczas warto miec narzędzie pozwalające na szybkie wykonywanie pewnych standardowych zadań.
 DevOpsTerminal działa również na urządzeniach mobilnych.
+
+#### Templates
+warto dodac obsluge wielu templates.
+poprzez instalacje pluginow, zeby stworzyc interfejs dla kazdego
+
+#### Projekty, Wyglad strony 
+Dodatkowo warto stworzyc widok drzewa, tree dla struktury projektow i komend,
+moze niektorzy beda bardziej intuicyjnie uzywac tej aplikacji
+* podobnie jak w skrzynce emailowej
 
 
 ### :email: Zgłoszenie E-mail
