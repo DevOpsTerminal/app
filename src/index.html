@@ -12,14 +12,15 @@
     <!--src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"-->
     <!--integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="-->
     <!--crossorigin="anonymous"></script>-->
-
+    <script src="js/command.js"></script>
+    <script src="js/project.js"></script>
 </head>
 <body>
 
 <!--<iframe id="iframe" src="template/cmd_list.html" width="480" height="320" scrolling="no" frameborder="0"></iframe>-->
 <!--<script src="template/cmd_list.html" id="cmd_list" type="template"></script>-->
 
-<script type="text/javascript" src="js/jsonify.js"></script>
+<!--<script type="text/javascript" src="js/jsonify.js"></script>-->
 
 <script>
     // TODO: form with json
@@ -51,9 +52,6 @@ $("#myform").dejsonify({
 "password": "awesome"
 });
      */
-
-
-
 
 
     var myData = {
@@ -107,7 +105,7 @@ $("#myform").dejsonify({
                             </p>
                         </div>`
                     );
-
+                    triggerOnButtons();
                 });
                 $("#history_accordion").accordion({
                     animate: {
@@ -210,6 +208,9 @@ $("#myform").dejsonify({
 </script>
 
 <script>
+
+
+
     function loadServerList() {
         $.ajax({
             url: routing.server.list,
@@ -307,6 +308,7 @@ $("#myform").dejsonify({
 
     $(function () {
         loadPage();
+
     });
 
 </script>
@@ -437,15 +439,15 @@ $("#myform").dejsonify({
             <div id="project_accordion">
 
                 <!--<h3 class="row_cmd">-->
-                    <!--<div class="time">today 15:24</div>-->
-                    <!--<div class="command">chmod -R 4777 /root</div>-->
+                <!--<div class="time">today 15:24</div>-->
+                <!--<div class="command">chmod -R 4777 /root</div>-->
                 <!--</h3>-->
 
                 <!--<p>-->
-                    <!--Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.-->
-                    <!--Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero-->
-                    <!--ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis-->
-                    <!--lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.-->
+                <!--Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.-->
+                <!--Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero-->
+                <!--ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis-->
+                <!--lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.-->
                 <!--</p>-->
 
 
@@ -580,7 +582,7 @@ $("#myform").dejsonify({
 
 <link href="css/style.css" rel="stylesheet">
 <script src="js/form_submit.js"></script>
-<script src="js/project.js"></script>
+
 
 
 </body>

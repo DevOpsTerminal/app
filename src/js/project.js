@@ -1,30 +1,3 @@
-// DEFAULT VALUES
-
-$(function () {
-    // $('.project_list button:first').click();
-    OpenProjectCmd();
-
-    $('.project_list button:first').addClass('ui-state-active');
-    $('.history_list button:first').addClass('ui-state-active');
-
-});
-
-
-// Open Project Cmd
-function OpenProjectCmd() {
-    console.log('OpenProjectCmd');
-    $(".project_cmd").slideDown("fast");
-    // $(".history_cmd").slideUp("fast");
-}
-
-
-// Open History Cmd
-function OpenHistoryCmd() {
-    console.log('OpenHistoryCmd');
-    $(".project_cmd").slideUp("fast");
-    // $(".history_cmd").slideDown("fast");
-}
-
 // Events
 
 $('.project_list button').on('click', function () {

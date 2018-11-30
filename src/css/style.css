@@ -104,20 +104,41 @@ body {
 
 
 /*
-    ACCORDION
+    ACCORDION && BUTTONS
  */
+.row_cmd div button {
+    padding: 0px;
+    font-size: small;
+    line-height: 14px;
+    cursor: pointer;
+}
+
 .row_cmd div.start button,
 .row_cmd div.stop button {
-    padding: 1px;
-    margin: -5px 0px 0px 0px;
-    line-height: 20px;
-    cursor: pointer;
+    /*margin: -7px 0px 0px 0px;*/
+    /*top: -7px;*/
+}
+
+.row_cmd div.start,
+.row_cmd div.stop {
+    /*padding: 0px;*/
+    /*margin: -5px 0px 0px 0px;*/
+    /*top: -7px;*/
 }
 
 .row_cmd div.start {
     float: right;
     text-align: left;
     width: 10%;
+}
+
+.row_cmd div.start button.active,
+.row_cmd div.stop button.active {
+    background-color: green;
+}
+.row_cmd div.start button.deactive,
+.row_cmd div.stop button.deactive {
+    background-color: gray;
 }
 
 .row_cmd div.stop {
@@ -181,3 +202,8 @@ body {
 .create_new_project_area {
     /*background-color: #5c5c5c;*/
 }
+
+
+/*
+
+ */
