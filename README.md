@@ -13,12 +13,9 @@ master: [![Build Status](https://travis-ci.org/ucgosupl/mm_legend_v2.svg?branch=
 dev: [![Build Status](https://travis-ci.org/ucgosupl/mm_legend_v2.svg?branch=dev)](https://travis-ci.org/ucgosupl/mm_legend_v2)
 
 ## DevOpsTerminal supporting
-Docker
 ![terminal][devopsterminal]
 ![+][support]
 ![docker][docker]
-Apicra
-![terminal][devopsterminal]
 ![+][support]
 ![apicra][apicra]
 
