@@ -208,7 +208,7 @@ If you are using this library in one of your projects, add it in this list. :spa
 [devopsterminal]: https://devopsterminal.com/wp-content/uploads/2018/11/devops_terminal-cube-green-48.png
 [support]: https://devopsterminal.com/wp-content/uploads/2018/11/heart-icon-e1543307802539.png
 [docker]: https://devopsterminal.com/wp-content/uploads/2018/11/docker-icon-1-e1543307587610.png
-[apicra]: https://devopsterminal.com/wp-content/uploads/2018/11/apicra-e1543569806508.jpg
+[apicra]: https://devopsterminal.com/wp-content/uploads/2018/11/apicra-e1543569871381.jpg
 
 ## :scroll: License
 
