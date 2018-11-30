@@ -16,6 +16,9 @@
     <script src="js/project.js"></script>
 </head>
 <body>
+<div class="waiting_for_content">
+    <h1 style="color: greenyellow">waiting ...</h1>
+</div>
 
 <!--<iframe id="iframe" src="template/cmd_list.html" width="480" height="320" scrolling="no" frameborder="0"></iframe>-->
 <!--<script src="template/cmd_list.html" id="cmd_list" type="template"></script>-->
@@ -23,6 +26,23 @@
 <!--<script type="text/javascript" src="js/jsonify.js"></script>-->
 
 <script>
+    $(document).ready(function () {
+        setTimeout(function () {
+            // document.getElementById('content_body').style.display='block';
+            $('#content_body').show();
+            $('.waiting_for_content').hide();
+        }, 700);
+    });
+
+    var hideBody = function () {
+        setTimeout(function () {
+            document.getElementById('content_body').style.display = 'auto';
+        }, 1000);
+        return false;
+    };
+
+    // hideBody();
+
     // TODO: form with json
     // https://github.com/kushalpandya/JSONify
     /*
@@ -211,7 +231,6 @@ $("#myform").dejsonify({
 <script>
 
 
-
     function loadServerList() {
         $.ajax({
             url: routing.server.list,
@@ -363,227 +382,233 @@ $("#myform").dejsonify({
     });
 </script>
 
-<div class="top_menu">
-    <div class="logo"></div>
-    <div class="project_name">
-        <a href="https://app.devopsterminal.com/" target="_blank">
-            DevOpsTerminal
-        </a>
+
+<div class="content_body" id="content_body" style="background-color: #333333; display: none">
+
+    <div class="top_menu">
+        <div class="logo"></div>
+        <div class="project_name">
+            <a href="https://app.devopsterminal.com/" target="_blank">
+                DevOpsTerminal
+            </a>
+        </div>
+        <div class="link share">
+            <a href="#about">
+                Share
+            </a>
+        </div>
+        <div class="link config">
+            <a href="https://github.com/DevOpsTerminal/frontend" target="_blank">
+                Git Repository
+            </a>
+        </div>
+        <div class="link about">
+            <a href="https://devopsterminal.github.io/frontend/" target="_blank">
+                About
+            </a>
+        </div>
     </div>
-    <div class="link share">
-        <a href="#about">
-            Share
-        </a>
-    </div>
-    <div class="link config">
-        <a href="https://github.com/DevOpsTerminal/frontend" target="_blank">
-            Git Repository
-        </a>
-    </div>
-    <div class="link about">
-        <a href="https://devopsterminal.github.io/frontend/" target="_blank">
-            About
-        </a>
-    </div>
-</div>
 
 
-<div id="tabs">
-    <ul class="server-list">
-        <!--<li><a href="#tabs-4">production</a></li>-->
-        <!--<li><a href="#tabs-3">..</a></li>-->
-        <li><a href="#tabs-new">+</a></li>
-    </ul>
+    <div id="tabs">
+        <ul class="server-list">
+            <!--<li><a href="#tabs-4">production</a></li>-->
+            <!--<li><a href="#tabs-3">..</a></li>-->
+            <li><a href="#tabs-new">+</a></li>
+        </ul>
 
-    <div id="tabs-1" class="mtab">
+        <div id="tabs-1" class="mtab">
 
 
-        <h3>Projects</h3>
+            <h3>Projects</h3>
 
-        <div class="create_new_project_area">
-            <div class="project-list project_list many_lines_space">
-                <button class="ui-button ui-corner-all ui-widget">all</button>
+            <div class="create_new_project_area">
+                <div class="project-list project_list many_lines_space">
+                    <button class="ui-button ui-corner-all ui-widget">all</button>
 
-                <button class="ui-button ui-corner-all ui-widget" id="create_new_project_form">+</button>
+                    <button class="ui-button ui-corner-all ui-widget" id="create_new_project_form">+</button>
+                </div>
+
+                <div class="create_new_project">
+                    <form action="#create_new_project">
+
+                        <div class="input group">
+                            <div class="input name">
+                                <label for="project_name">New Project</label>
+                            </div>
+                            <div class="input value">
+                                <input type="text" name="project_name" id="project_name">
+                            </div>
+                        </div>
+
+                        <div class="input group">
+                            <div class="input name">
+                                <label for="path">Path</label>
+                            </div>
+                            <div class="input value">
+                                <input type="text" name="path" id="path">
+                            </div>
+                        </div>
+                        <input type="submit" id="create_new_project_button"
+                               class="create_new_project_button ui-button ui-corner-all ui-widget" value="create">
+                    </form>
+                </div>
             </div>
 
-            <div class="create_new_project">
-                <form action="#create_new_project">
+            <div class="project_cmd">
+
+                <h3>Commands & Scripts</h3>
+
+                <div id="project_accordion">
+
+                    <!--<h3 class="row_cmd">-->
+                    <!--<div class="time">today 15:24</div>-->
+                    <!--<div class="command">chmod -R 4777 /root</div>-->
+                    <!--</h3>-->
+
+                    <!--<p>-->
+                    <!--Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.-->
+                    <!--Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero-->
+                    <!--ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis-->
+                    <!--lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.-->
+                    <!--</p>-->
+
+
+                    <h3>
+                        <label for="command">New command</label>
+                        <input type="text" name="command" id="command">
+                        <input type="submit" value="execute">
+                    </h3>
+                    <div>
+                        <h4>What eman this command, how to use</h4>
+                        <p>
+                        <pre>chmod [options] mode file1 …</pre>
+                        <a href="https://de.wikipedia.org/wiki/Chmod">wiki chmod</a>
+                        </p>
+                        <h4>Try to use another used before command</h4>
+                        <p>
+                            Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+                            et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+                            faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+                            mauris vel est.
+                        </p>
+                        <h4>Try to use script from this project</h4>
+                        <p>
+                            Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                            inceptos himenaeos.
+                        </p>
+                        <ul>
+                            <li>List item one</li>
+                            <li>List item two</li>
+                            <li>List item three</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <h3 class="last_session">Last Sessions</h3>
+
+            <div class="widget">
+                <div class="history_list many_lines_space">
+                    <!--<button>2018</button>-->
+                    <!--<button>2017</button>-->
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div id="tabs-2">
+            <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id
+                nunc.
+                Duis
+                scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut
+                tempus
+                eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam.
+                Praesent
+                in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean
+                vel
+                metus.
+                Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus
+                pellentesque
+                pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et
+                purus.
+            </p>
+        </div>
+
+
+        <div id="tabs-new">
+
+            <form action="#" class="contact-form">
+                <div class="create_new_host widget form">
 
                     <div class="input group">
                         <div class="input name">
-                            <label for="project_name">New Project</label>
+                            <label for="hostname">Hostname</label>
                         </div>
                         <div class="input value">
-                            <input type="text" name="project_name" id="project_name">
+                            <input type="text" name="hostname" id="hostname">
                         </div>
                     </div>
 
                     <div class="input group">
                         <div class="input name">
-                            <label for="path">Path</label>
+                            <label for="user">Username</label>
                         </div>
                         <div class="input value">
-                            <input type="text" name="path" id="path">
+                            <input type="text" name="user" id="user">
                         </div>
                     </div>
-                    <input type="submit" id="create_new_project_button"
-                           class="create_new_project_button ui-button ui-corner-all ui-widget" value="create">
-                </form>
-            </div>
+
+                    <div class="input group">
+                        <div class="input name">
+                            <label for="password">Password</label>
+                        </div>
+                        <div class="input value">
+                            <input type="text" name="password" id="password">
+                        </div>
+                    </div>
+
+
+                    <div class="input group">
+                        <div class="input name">
+                            <label for="port">Port</label>
+                        </div>
+                        <div class="input value">
+                            <input type="text" name="port" id="port">
+                        </div>
+
+                    </div>
+
+                    <div class="input group">
+                        <div class="input name">
+                        </div>
+                        <div class="input value">
+                            <input type="submit" id="create_host" class="create_host" name="create_host"
+                                   value="Create New Host"
+                            >
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <textarea class="results__display"></textarea>
+            <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla
+                facilisi.
+                Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec
+                mattis,
+                pede</p>
         </div>
-
-        <div class="project_cmd">
-
-            <h3>Commands & Scripts</h3>
-
-            <div id="project_accordion">
-
-                <!--<h3 class="row_cmd">-->
-                <!--<div class="time">today 15:24</div>-->
-                <!--<div class="command">chmod -R 4777 /root</div>-->
-                <!--</h3>-->
-
-                <!--<p>-->
-                <!--Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.-->
-                <!--Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero-->
-                <!--ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis-->
-                <!--lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.-->
-                <!--</p>-->
-
-
-                <h3>
-                    <label for="command">New command</label>
-                    <input type="text" name="command" id="command">
-                    <input type="submit" value="execute">
-                </h3>
-                <div>
-                    <h4>What eman this command, how to use</h4>
-                    <p>
-                    <pre>chmod [options] mode file1 …</pre>
-                    <a href="https://de.wikipedia.org/wiki/Chmod">wiki chmod</a>
-                    </p>
-                    <h4>Try to use another used before command</h4>
-                    <p>
-                        Cras dictum. Pellentesque habitant morbi tristique senectus et netus
-                        et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
-                        faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
-                        mauris vel est.
-                    </p>
-                    <h4>Try to use script from this project</h4>
-                    <p>
-                        Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
-                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-                        inceptos himenaeos.
-                    </p>
-                    <ul>
-                        <li>List item one</li>
-                        <li>List item two</li>
-                        <li>List item three</li>
-                    </ul>
-                </div>
-
-            </div>
-
-        </div>
-
-        <h3 class="last_session">Last Sessions</h3>
-
-        <div class="widget">
-            <div class="history_list many_lines_space">
-                <!--<button>2018</button>-->
-                <!--<button>2017</button>-->
-            </div>
-
-        </div>
-
-
-    </div>
-
-    <div id="tabs-2">
-        <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc.
-            Duis
-            scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut
-            tempus
-            eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam.
-            Praesent
-            in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel
-            metus.
-            Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus
-            pellentesque
-            pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et
-            purus.
-        </p>
-    </div>
-
-
-    <div id="tabs-new">
-
-        <form action="#" class="contact-form">
-            <div class="create_new_host widget form">
-
-                <div class="input group">
-                    <div class="input name">
-                        <label for="hostname">Hostname</label>
-                    </div>
-                    <div class="input value">
-                        <input type="text" name="hostname" id="hostname">
-                    </div>
-                </div>
-
-                <div class="input group">
-                    <div class="input name">
-                        <label for="user">Username</label>
-                    </div>
-                    <div class="input value">
-                        <input type="text" name="user" id="user">
-                    </div>
-                </div>
-
-                <div class="input group">
-                    <div class="input name">
-                        <label for="password">Password</label>
-                    </div>
-                    <div class="input value">
-                        <input type="text" name="password" id="password">
-                    </div>
-                </div>
-
-
-                <div class="input group">
-                    <div class="input name">
-                        <label for="port">Port</label>
-                    </div>
-                    <div class="input value">
-                        <input type="text" name="port" id="port">
-                    </div>
-
-                </div>
-
-                <div class="input group">
-                    <div class="input name">
-                    </div>
-                    <div class="input value">
-                        <input type="submit" id="create_host" class="create_host" name="create_host"
-                               value="Create New Host"
-                        >
-
-                    </div>
-                </div>
-            </div>
-        </form>
-
-        <textarea class="results__display"></textarea>
-        <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla
-            facilisi.
-            Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis,
-            pede</p>
     </div>
 </div>
 
 <link href="css/style.css" rel="stylesheet">
 <script src="js/form_submit.js"></script>
-
 
 
 </body>
