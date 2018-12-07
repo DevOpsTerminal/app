@@ -16,16 +16,14 @@ https://mobirise.com/bootstrap-builder/
 ### Frontend tools
 https://www.cleveroad.com/blog/gulp-browserify-webpack-grunt
 
-Table comparasion
-
-https://blog.vanila.io/webpack-what-is-it-and-is-it-better-than-gulp-375db8011d22
+#### Table comparasion
 
 https://da-14.com/blog/gulp-vs-grunt-vs-webpack-comparison-build-tools-task-runners
 
 in case if you are talking about a small project, Grunt is the best choice. It is small, simple and pretty functional. But if we want to make something bigger, you would better think about Gulp, while Webpack is directly for dealing with some “big mamas
 
-how to implment webpack
-
+#### how to implment webpack
+https://blog.vanila.io/webpack-what-is-it-and-is-it-better-than-gulp-375db8011d22
 
 
 ## Mobile Version
