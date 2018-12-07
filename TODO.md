@@ -13,6 +13,13 @@ https://pingendo.com/
 https://mobirise.com/bootstrap-builder/
 
 
+### Frontend tools
+https://www.cleveroad.com/blog/gulp-browserify-webpack-grunt
+
+how to implment webpack
+
+
+
 ## Mobile Version
 ### CLick on the bar accordion
 should be possible to click - show/close the accordion
