@@ -24,6 +24,7 @@ in case if you are talking about a small project, Grunt is the best choice. It i
 
 #### how to implment webpack
 https://blog.vanila.io/webpack-what-is-it-and-is-it-better-than-gulp-375db8011d22
+https://www.toptal.com/front-end/webpack-browserify-gulp-which-is-better
 
 
 ## Mobile Version
