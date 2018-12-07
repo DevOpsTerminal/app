@@ -6,6 +6,14 @@
 
  [![Support me on Patreon][badge_patreon]][patreon] [![Buy me a book][badge_amazon]][amazon] [![PayPal][badge_paypal_donate]][paypal-donations] [![Ask me anything](https://img.shields.io/badge/ask%20me-anything-1abc9c.svg)](https://github.com/IonicaBizau/ama) [![Version](https://img.shields.io/npm/v/edit-json-file.svg)](https://www.npmjs.com/package/edit-json-file) [![Downloads](https://img.shields.io/npm/dt/edit-json-file.svg)](https://www.npmjs.com/package/edit-json-file)
 
+
+[![Code Climate](https://codeclimate.com/github/FriendsOfPHP/pickle.svg)](https://codeclimate.com/github/FriendsOfPHP/pickle)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/FriendsOfPHP/pickle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/FriendsOfPHP/pickle/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/FriendsOfPHP/pickle/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/FriendsOfPHP/pickle/?branch=master)
+[![Build Status](https://travis-ci.org/FriendsOfPHP/pickle.svg?branch=master)](https://travis-ci.org/FriendsOfPHP/pickle)
+
+
+
 Terminal with Web Interface for any team - Let's work in terminal together
 
 ## Server Status
