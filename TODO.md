@@ -31,6 +31,7 @@ jeśli budujesz REST API w node.js to wiesz jaka będzie odpowiedź z danego end
       return a.toFixed(2);
     }
 
+### EXAMPLE typescript + REST API + swagger
 
 #### how to implment webpack
 https://blog.vanila.io/webpack-what-is-it-and-is-it-better-than-gulp-375db8011d22
