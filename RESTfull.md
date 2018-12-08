@@ -9,3 +9,6 @@ https://blog.bitsrc.io/understanding-a-restful-api-using-node-js-and-typescript-
 
 ### Example
 https://github.com/DevOpsTerminal/swagger-to-existing-nodejs-project/tree/master
+
+### Swagger integrations
+https://swagger.io/tools/open-source/open-source-integrations/
