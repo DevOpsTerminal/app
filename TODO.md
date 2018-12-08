@@ -16,11 +16,21 @@ https://mobirise.com/bootstrap-builder/
 ### Frontend tools
 https://www.cleveroad.com/blog/gulp-browserify-webpack-grunt
 
-#### Table comparasion
+#### Table comparasion: webpack
 
 https://da-14.com/blog/gulp-vs-grunt-vs-webpack-comparison-build-tools-task-runners
 
 in case if you are talking about a small project, Grunt is the best choice. It is small, simple and pretty functional. But if we want to make something bigger, you would better think about Gulp, while Webpack is directly for dealing with some “big mamas
+
+## TYPESCRIPT
+https://typeofweb.com/2016/04/06/typescript-na-serwerze/
+
+jeśli budujesz REST API w node.js to wiesz jaka będzie odpowiedź z danego endpointa. Wiesz i umawiasz się z kimś, kto tworzy front-end, że ona taka będzie. Być może zawierasz tę informację w dokumentacji. Ale jeśli coś zmienia się w implementacji, to musisz zaktualizować dokumentację, poinformować front-endowców o zmianach i zadbać o to, aby w projekcie ponownie była spójność. Może być to kłopotliwe, w szczególności gdy projekt jest złożony. Zupełnie inaczej wygląda ta sama sytuacja jeśli JavaScript zastąpi się TypeScriptem: informację o tym co zwraca dany endpoint można zapisać w osobnym pliku jako Interface i ten plik współdzielić pomiędzy front-endem i back-endem. Kompilator zadba o to, żeby odpowiedź z serwera rzeczywiście pasowała do danego interfejsu, na front-endzie będzie 100% pewność co do pól znajdujących się w obiekcie przychodzącym z serwera
+
+    function round(a:number):string {  
+      return a.toFixed(2);
+    }
+
 
 #### how to implment webpack
 https://blog.vanila.io/webpack-what-is-it-and-is-it-better-than-gulp-375db8011d22
