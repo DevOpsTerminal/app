@@ -1,3 +1,7 @@
+# Tasks
+after we become more users, someone can create the tasks as tickets in this project
+
+
 ### Desktop version:
 electron
 
@@ -12,6 +16,13 @@ https://pingendo.com/
 
 https://mobirise.com/bootstrap-builder/
 
+### Donate 
+patronite
+paypal
+
+
+### opensource community
+https://opencollective.com/
 
 ### Frontend tools
 https://www.cleveroad.com/blog/gulp-browserify-webpack-grunt
