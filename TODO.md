@@ -3,10 +3,10 @@ after we become more users, someone can create the tasks as tickets in this proj
 
 
 ### Desktop version:
-electron
++ electron
 
 ### React version:
-nextjs
++ nextjs
 
 ### Bootstrap Version:
 
@@ -17,8 +17,8 @@ https://pingendo.com/
 https://mobirise.com/bootstrap-builder/
 
 ### Donate 
-patronite
-paypal
++ patronite
++ paypal
 
 
 ### opensource community
