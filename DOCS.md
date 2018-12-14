@@ -1,3 +1,6 @@
+# example docs
+https://github.com/pyeve/eve/tree/master/docs
+
 ## software requirements specification (SRS)
 http://www.gatherspace.com/static/software_requirement_specification.html
 
