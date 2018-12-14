@@ -141,6 +141,20 @@ https://github.com/DevOpsTerminal
 # Example Data:
 
 
+_Read more at https://devopsterminal.github.io/docs 
+
+
+## Changelog
+A [Changelog](CHANGELOG.md) has been available since the beginning of time
+
+
+## Where to get help
+Found a bug? 
+Got a question? 
+Just not sure how something works?  
+Please [create an issue](//github.com/devopsterminal/frontend/issues) and I'll do my best to help out.  
+
+
 
 ## :yum: How to contribute
 Have an idea? Found a bug? See [how to contribute][contributing].
