@@ -7,6 +7,22 @@ after we become more users, someone can create the tasks as tickets in this proj
 
 ### Remote Templates
 http://stephenwalther.com/archive/2010/11/30/an-introduction-to-jquery-templates
+Reading and Writing JSON Files with Node.js
+https://stackabuse.com/reading-and-writing-json-files-with-node-js/
+
+
+### API restlet, generate from JSON
+https://studio.restlet.com/apis/local/resources/~2Ftest/new-operation
+
+## Swagger tools include:
+
++ Swagger Editor – browser-based editor where you can write OpenAPI specs.
++ Swagger UI – renders OpenAPI specs as interactive API documentation.
++ Swagger Codegen – generates server stubs and client libraries from an OpenAPI spec.
+
+## restdb
+To generate a complete API documentation for the database, click the Open link. This opens a new window with your API documentation.
+https://restdb.io/docs/swagger
 
 ### Desktop version:
 + electron
