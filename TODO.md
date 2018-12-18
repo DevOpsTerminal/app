@@ -24,6 +24,17 @@ https://studio.restlet.com/apis/local/resources/~2Ftest/new-operation
 To generate a complete API documentation for the database, click the Open link. This opens a new window with your API documentation.
 https://restdb.io/docs/swagger
 
+## Dreamfactory
+https://blog.dreamfactory.com/create-a-mysql-rest-api-in-minutes-using-dreamfactory/
+Generating the MySQL REST API
+DreamFactory can generate REST APIs for 18 databases, among them MySQL, Microsoft SQL Server, Oracle, PostgreSQL, and MongoDB. To do so, you’ll login to the DreamFactory administration interface, navigate to Services and then enter the service creation interface by clicking on the Create button located to the left of the screen. From there you’ll select the MySQL service type by navigating to Database > MySQL (see below screenshot).
+
+
+## Openapi example, swagger
+https://github.com/thomaxxl/safrs
+SAFRS is an acronym for SqlAlchemy Flask-Restful Swagger. The purpose of this framework is to help python developers create a self-documenting JSON API for sqlalchemy database objects and relationships. These objects can be serialized to JSON and can be created, retrieved, updated and deleted through the JSON API. Optionally, custom resource object methods can be exposed and invoked using JSON. Class and method descriptions and examples can be provided in yaml syntax in the code comments. The description is parsed and shown in the swagger web interface.
+
+
 ### Desktop version:
 + electron
 
