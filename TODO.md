@@ -5,6 +5,8 @@ https://laravel.com/docs/5.7/envoy
 # Tasks
 after we become more users, someone can create the tasks as tickets in this project
 
+### Remote Templates
+http://stephenwalther.com/archive/2010/11/30/an-introduction-to-jquery-templates
 
 ### Desktop version:
 + electron
